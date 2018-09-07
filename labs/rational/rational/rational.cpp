@@ -229,14 +229,14 @@ int main()
 	testParse("{s/4}");
 }
 
-Rational::Rational(const int numerator) : Rational(numerator, 0)
+Rational::Rational(const int numerator) : Rational(numerator, 1)
 {
 
 }
 
 Rational::Rational(const int numerator, const int denominator) : num(numerator), den(denominator)
 {
-
+	normalize();
 }
 
 Rational operator+(const Rational& lhs, const Rational& rhs)
