@@ -18,13 +18,13 @@ struct Rational
 	{
 		return !operator==(rhs);
 	}
-	
+
 	Rational& operator+=(const Rational& rhs);
 	Rational& operator+=(const int rhs)
 	{
 		return operator+=(Rational(rhs));
 	}
-	
+
 	Rational& operator-=(const Rational& rhs);
 	Rational& operator-=(const int rhs)
 	{
@@ -68,7 +68,7 @@ inline ostream& operator<<(ostream& ostrm, const Rational& rhs)
 	return rhs.writeTo(ostrm);
 }
 
-inline istream& operator>>(istream& istrm, Rational& rhs)
+inline istream& operator >> (istream& istrm, Rational& rhs)
 {
 	return rhs.readFrom(istrm);
 }
@@ -98,7 +98,7 @@ bool testSum()
 	bool result = (answer == (number1 + number2));
 	if (result)
 		cout << "Test 1 passed" << endl;
-	else 
+	else
 		cout << "Test 1 failed" << endl;
 
 	return result;
@@ -151,7 +151,7 @@ bool testDiv()
 
 bool testSumEq()
 {
-	
+
 	Rational number1{ 10, 2 };
 	Rational number2{ 15, 6 };
 	Rational answer{ 15, 2 };
@@ -229,14 +229,14 @@ int main()
 	testParse("{s/4}");
 }
 
-Rational::Rational(const int numerator) : Rational(numerator, 0)
+Rational::Rational(const int numerator) : Rational(numerator, 1)
 {
 
 }
 
 Rational::Rational(const int numerator, const int denominator) : num(numerator), den(denominator)
 {
-
+	normalize();
 }
 
 Rational operator+(const Rational& lhs, const Rational& rhs)
@@ -331,7 +331,7 @@ istream& Rational::readFrom(istream& istrm)
 	return istrm;
 }
 
-int gcd(int a, int b) 
+int gcd(int a, int b)
 {
 	if (b == 0)
 		return a;
