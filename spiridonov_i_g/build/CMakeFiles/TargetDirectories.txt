@@ -1,4 +1,0 @@
-C:/Users/rtviw/Documents/Visual Studio 2015/Projects/spiridonov_i_g/spiridonov_i_g/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/rtviw/Documents/Visual Studio 2015/Projects/spiridonov_i_g/spiridonov_i_g/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/rtviw/Documents/Visual Studio 2015/Projects/spiridonov_i_g/spiridonov_i_g/build/labs/complex/CMakeFiles/complex.dir
-C:/Users/rtviw/Documents/Visual Studio 2015/Projects/spiridonov_i_g/spiridonov_i_g/build/labs/rational/CMakeFiles/rational.dir
