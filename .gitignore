@@ -21,6 +21,8 @@
 bld/
 [Bb]in/
 [Oo]bj/
+spiridonov_i_g/bin.win64.vc2015.dbg/
+spiridonov_i_g/build/
 
 # Visual Studio 2015 cache/options directory
 .vs/
