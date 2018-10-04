@@ -4,32 +4,11 @@
 
 using namespace std;
 
+ostream& operator<<(ostream& ostrm, const Complex& rhs);
+istream& operator>>(istream& istrm, Complex& rhs);
+
 Complex operator+(const Complex& lhs, const Complex& rhs);
 Complex operator-(const Complex& lhs, const Complex& rhs);
-
-inline ostream& operator<<(ostream& ostrm, const Complex& rhs)
-{
-	return rhs.writeTo(ostrm);
-}
-
-inline istream& operator>>(istream& istrm, Complex& rhs)
-{
-	return rhs.readFrom(istrm);
-}
-
-Complex operator+(const Complex& lhs, const Complex& rhs)
-{
-	Complex sum(lhs);
-	sum += rhs;
-	return sum;
-}
-
-Complex operator-(const Complex& lhs, const Complex& rhs)
-{
-	Complex sub(lhs);
-	sub -= rhs;
-	return sub;
-}
 
 bool testEq()
 {
@@ -136,5 +115,4 @@ int main()
 	testParse("{8.9,9}");
 	testParse("{\t\t\t8.9, \n9}");
 	testParse("   {8.9,9");
-
 }

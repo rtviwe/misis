@@ -4,9 +4,6 @@
 
 using namespace std;
 
-Complex operator+(const Complex& lhs, const Complex& rhs);
-Complex operator-(const Complex& lhs, const Complex& rhs);
-
 Complex::Complex(const double real) : Complex(real, 0.0)
 {
 
@@ -103,4 +100,28 @@ istream& Complex::readFrom(istream& istrm)
 		}
 	}
 	return istrm;
+}
+
+ostream& operator<<(ostream& ostrm, const Complex& rhs)
+{
+	return rhs.writeTo(ostrm);
+}
+
+istream& operator>>(istream& istrm, Complex& rhs)
+{
+	return rhs.readFrom(istrm);
+}
+
+Complex operator+(const Complex& lhs, const Complex& rhs)
+{
+	Complex sum(lhs);
+	sum += rhs;
+	return sum;
+}
+
+Complex operator-(const Complex& lhs, const Complex& rhs)
+{
+	Complex sub(lhs);
+	sub -= rhs;
+	return sub;
 }

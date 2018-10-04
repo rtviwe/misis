@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 Rational::Rational(const int numerator)
 {
 	setNumerator(numerator);
@@ -159,7 +158,45 @@ void Rational::normalize()
 
 	if (den < 0)
 	{
-		num *= -1;
-		den *= -1;
+		num = -num;
+		den = -den;
 	}
+}
+
+ostream& operator<<(ostream& ostrm, const Rational& rhs)
+{
+	return rhs.writeTo(ostrm);
+}
+
+istream& operator >> (istream& istrm, Rational& rhs)
+{
+	return rhs.readFrom(istrm);
+}
+
+Rational operator+(const Rational& lhs, const Rational& rhs)
+{
+	Rational sum(lhs);
+	sum += rhs;
+	return sum;
+}
+
+Rational operator-(const Rational& lhs, const Rational& rhs)
+{
+	Rational sub(lhs);
+	sub -= rhs;
+	return sub;
+}
+
+Rational operator*(const Rational& lhs, const Rational& rhs)
+{
+	Rational mul(lhs);
+	mul *= rhs;
+	return mul;
+}
+
+Rational operator/(const Rational& lhs, const Rational& rhs)
+{
+	Rational div(lhs);
+	div /= rhs;
+	return div;
 }

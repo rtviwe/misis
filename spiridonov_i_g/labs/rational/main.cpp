@@ -4,54 +4,20 @@
 
 using namespace std;
 
+ostream& operator<<(ostream& ostrm, const Rational& rhs);
+istream& operator>>(istream& istrm, Rational& rhs);
+
 Rational operator+(const Rational& lhs, const Rational& rhs);
 Rational operator-(const Rational& lhs, const Rational& rhs);
 Rational operator*(const Rational& lhs, const Rational& rhs);
 Rational operator/(const Rational& lhs, const Rational& rhs);
-
-inline ostream& operator<<(ostream& ostrm, const Rational& rhs)
-{
-	return rhs.writeTo(ostrm);
-}
-
-inline istream& operator>>(istream& istrm, Rational& rhs)
-{
-	return rhs.readFrom(istrm);
-}
-
-Rational operator+(const Rational& lhs, const Rational& rhs)
-{
-	Rational sum(lhs);
-	sum += rhs;
-	return sum;
-}
-
-Rational operator-(const Rational& lhs, const Rational& rhs)
-{
-	Rational sub(lhs);
-	sub -= rhs;
-	return sub;
-}
-
-Rational operator*(const Rational& lhs, const Rational& rhs)
-{
-	Rational mul(lhs);
-	mul *= rhs;
-	return mul;
-}
-
-Rational operator/(const Rational& lhs, const Rational& rhs)
-{
-	Rational div(lhs);
-	div /= rhs;
-	return div;
-}
 
 bool testParse(const string& str)
 {
 	istringstream istrm(str);
 	Rational number;
 	istrm >> number;
+
 	string answer;
 
 	if (istrm.good())
