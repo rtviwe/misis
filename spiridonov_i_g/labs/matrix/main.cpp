@@ -28,8 +28,5 @@ int main()
 	}
 	cout << endl;
 
-	cout << da2[1] << endl;
-
-
 	return 0;
 }
