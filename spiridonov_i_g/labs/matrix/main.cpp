@@ -1,15 +1,17 @@
 #include <iostream>
 #include <sstream>
 #include "dynamicArray.hpp"
+#include "matrix.hpp"
 
 using namespace std;
 
-int main()
+void testDynamicArray()
 {
+	cout << "Test Dynamic Array" << endl;
 	DynamicArray da1;
 	DynamicArray da2(5);
 	DynamicArray da3(da2);
-	
+
 	for (int i = 0; i < 5; i++)
 	{
 		da2[i] = i;
@@ -28,5 +30,38 @@ int main()
 	}
 	cout << endl;
 
+	cout << da2[1] << endl;
+}
+
+void testMatrix()
+{
+	cout << "Test Matrix" << endl;
+
+	Matrix m1;
+	Matrix m2(5);
+	Matrix m4(m2);
+
+	for (int i = 0; i < m2.getSize(); i++)
+	{
+		for (int j = 0; j < m2.getSize(); j++)
+		{
+			m2[i][j] = i + j;
+		}
+	}
+
+	for (int i = 0; i < m4.getSize(); i++)
+	{
+		for (int j = 0; j < m4.getSize(); j++)
+		{
+			cout << m4[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+int main()
+{
+	testDynamicArray();
+	testMatrix();
 	return 0;
 }

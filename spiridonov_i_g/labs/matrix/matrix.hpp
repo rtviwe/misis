@@ -14,6 +14,8 @@ public:
 	Matrix(const DynamicArray& obj);
 	Matrix(const Matrix& copy);
 
+	int getSize();
+
 	DynamicArray& operator[](const int i);
 
 	~Matrix();
