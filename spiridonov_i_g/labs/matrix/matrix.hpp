@@ -11,7 +11,7 @@ class Matrix
 public:
 	Matrix();
 	Matrix(const int size);
-	Matrix(const DynamicArray& obj);
+	Matrix(DynamicArray* arrays);
 	Matrix(const Matrix& copy);
 
 	int getSize();

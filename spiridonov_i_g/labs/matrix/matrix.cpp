@@ -16,9 +16,10 @@ Matrix::Matrix(const int size)
 	arrays_ = new DynamicArray[size_];
 }
 
-Matrix::Matrix(const DynamicArray& obj)
+Matrix::Matrix(DynamicArray* arrays)
 {
-	
+	size_ = arrays->getSize();
+	arrays_ = arrays;
 }
 
 Matrix::Matrix(const Matrix& obj)
