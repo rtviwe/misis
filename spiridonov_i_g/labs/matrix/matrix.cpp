@@ -19,13 +19,25 @@ Matrix::Matrix(const int size)
 Matrix::Matrix(DynamicArray* arrays)
 {
 	size_ = arrays->getSize();
-	arrays_ = arrays;
+	arrays_ = new DynamicArray[size_];
+
+	for (int i(0); i < size_; i++)
+	{
+		DynamicArray* temp = new DynamicArray(arrays[i]);
+		arrays_[i] = *temp;
+	}
 }
 
 Matrix::Matrix(const Matrix& obj)
-	: size_(obj.size_), arrays_(obj.arrays_)
 {
+	size_ = obj.size_;
+	arrays_ = new DynamicArray[size_];
 
+	for (int i(0); i < size_; i++)
+	{
+		DynamicArray* temp = new DynamicArray(obj.arrays_[i]);
+		arrays_[i] = *temp;
+	}
 }
 
 int Matrix::getSize()
@@ -40,5 +52,5 @@ DynamicArray& Matrix::operator[](const int i)
 
 Matrix::~Matrix()
 {
-	
+	delete[] arrays_;
 }

@@ -28,8 +28,7 @@ DynamicArray::DynamicArray(const DynamicArray& obj)
 
 	for (int i(0); i < size_; i++)
 	{
-		int temp = obj.data_[i];
-		data_[i] = temp;
+		data_[i] = obj.data_[i];
 	}
 }
 
@@ -42,7 +41,7 @@ void DynamicArray::setSize(int size)
 {
 	int* newData = new int[size];
 
-	for (int i = 0; i < size_; i++)
+	for (int i(0); i < size_; i++)
 		newData[i] = data_[i];
 
 	data_ = newData;
