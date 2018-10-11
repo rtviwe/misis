@@ -40,5 +40,5 @@ DynamicArray& Matrix::operator[](const int i)
 
 Matrix::~Matrix()
 {
-
+	
 }

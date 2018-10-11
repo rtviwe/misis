@@ -7,71 +7,70 @@ using namespace std;
 
 void testDynamicArray()
 {
-	cout << "Test Dynamic Array" << endl;
-	DynamicArray da1;
-	DynamicArray da2(5);
-	DynamicArray da3(da2);
+	DynamicArray dynamicArray1;
+	DynamicArray dynamicArray2(5);
+	DynamicArray dynamicArray3(dynamicArray2);
 
-	for (int i = 0; i < 5; i++)
+	for (int i(0); i < 5; i++)
 	{
-		da2[i] = i;
+		dynamicArray2[i] = i;
 	}
 
-	for (int i = 0; i < 5; i++)
+	for (int i(0); i < 5; i++)
 	{
-		cout << da2[i] << endl;
-	}
-	cout << endl;
-
-	da3[1] = 10;
-	for (int i = 0; i < 5; i++)
-	{
-		cout << da3[i] << endl;
+		cout << dynamicArray2[i] << endl;
 	}
 	cout << endl;
 
-	cout << da2[1] << endl;
+	dynamicArray3[1] = 10;
+	for (int i(0); i < 5; i++)
+	{
+		cout << dynamicArray3[i] << endl;
+	}
+	cout << endl;
+
+	cout << dynamicArray2[1] << endl;
 }
 
 void testMatrix()
 {
 	cout << "Test Matrix" << endl;
 
-	Matrix m1;
-	Matrix m2(5);
-	DynamicArray da1(5);
-	DynamicArray da2(5);
-	DynamicArray da3(5);
-	DynamicArray da4(5);
-	DynamicArray da5(5);
-	DynamicArray dar[5] { da1, da2, da3, da4, da5 };
-	Matrix m3(dar);
-	Matrix m4(m2);
+	Matrix matrix1;
+	Matrix matrix2(5);
+	DynamicArray dynamicArray1(5);
+	DynamicArray dynamicArray2(5);
+	DynamicArray dynamicArray3(5);
+	DynamicArray dynamicArray4(5);
+	DynamicArray dynamicArray5(5);
+	DynamicArray arrayOfDynamicArrays[5] { dynamicArray1, dynamicArray2, dynamicArray3, dynamicArray4, dynamicArray5 };
+	Matrix matrix3(arrayOfDynamicArrays);
+	Matrix matrix4(matrix2);
 
-	for (int i = 0; i < m2.getSize(); i++)
+	for (int i(0); i < matrix2.getSize(); i++)
 	{
-		for (int j = 0; j < m2.getSize(); j++)
+		for (int j = 0; j < matrix2.getSize(); j++)
 		{
-			m2[i][j] = i + j;
+			matrix2[i][j] = i + j;
 		}
 	}
-	m2[2][3] = 0;
+	matrix2[2][3] = 0;
 
-	for (int i = 0; i < m4.getSize(); i++)
+	for (int i(0); i < matrix4.getSize(); i++)
 	{
-		for (int j = 0; j < m4.getSize(); j++)
+		for (int j(0); j < matrix4.getSize(); j++)
 		{
-			cout << m4[i][j] << " ";
+			cout << matrix4[i][j] << " ";
 		}
 		cout << endl;
 	}
 	cout << endl;
 
-	for (int i = 0; i < m4.getSize(); i++)
+	for (int i(0); i < matrix4.getSize(); i++)
 	{
-		for (int j = 0; j < m4.getSize(); j++)
+		for (int j(0); j < matrix4.getSize(); j++)
 		{
-			cout << m3[i][j] << " ";
+			cout << matrix3[i][j] << " ";
 		}
 		cout << endl;
 	}
@@ -81,5 +80,6 @@ int main()
 {
 	testDynamicArray();
 	testMatrix();
+
 	return 0;
 }

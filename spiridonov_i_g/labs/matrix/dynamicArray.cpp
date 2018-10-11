@@ -14,12 +14,23 @@ DynamicArray::DynamicArray(const int size)
 
 	size_ = size;
 	data_ = new int[size_];
+
+	for (int i(0); i < size_; i++)
+	{
+		data_[i] = 0;
+	}
 }
 
 DynamicArray::DynamicArray(const DynamicArray& obj)
-	: size_(obj.size_), data_(obj.data_)
 {
+	size_ = obj.size_;
+	data_ = new int[size_];
 
+	for (int i(0); i < size_; i++)
+	{
+		int temp = obj.data_[i];
+		data_[i] = temp;
+	}
 }
 
 int DynamicArray::getSize()
@@ -55,5 +66,5 @@ int& DynamicArray::operator[](const int i)
 
 DynamicArray::~DynamicArray()
 {
-
+	delete[] data_;
 }
