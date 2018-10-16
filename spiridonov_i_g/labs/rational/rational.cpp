@@ -168,7 +168,7 @@ ostream& operator<<(ostream& ostrm, const Rational& rhs)
 	return rhs.writeTo(ostrm);
 }
 
-istream& operator >> (istream& istrm, Rational& rhs)
+istream& operator>>(istream& istrm, Rational& rhs)
 {
 	return rhs.readFrom(istrm);
 }

@@ -125,3 +125,17 @@ Complex operator-(const Complex& lhs, const Complex& rhs)
 	sub -= rhs;
 	return sub;
 }
+
+Complex operator*(const Complex& lhs, const Complex& rhs)
+{
+	Complex mul(lhs);
+	mul *= rhs;
+	return mul;
+}
+
+Complex operator/(const Complex& lhs, const Complex& rhs)
+{
+	Complex div(lhs);
+	div /= rhs;
+	return div;
+}

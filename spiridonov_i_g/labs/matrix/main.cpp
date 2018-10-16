@@ -5,6 +5,11 @@
 
 using namespace std;
 
+bool testDynamicArrayConstructor()
+{
+
+}
+
 void testDynamicArray()
 {
 	DynamicArray dynamicArray1;
