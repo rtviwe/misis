@@ -12,7 +12,7 @@ Complex operator-(const Complex& lhs, const Complex& rhs);
 Complex operator*(const Complex& lhs, const Complex& rhs);
 Complex operator/(const Complex& lhs, const Complex& rhs);
 
-bool testEquals()
+void testEquals()
 {
 	Complex number1{ 10, 20 };
 	Complex number2{ 10, 20 };
@@ -22,11 +22,9 @@ bool testEquals()
 		cout << "Test equals " << number1 << " == " << number2 << " passed" << endl;
 	else
 		cout << "Test equals " << number1 << " == " << number2 << " failed" << endl;
-
-	return result;
 }
 
-bool testNotEquals()
+void testNotEquals()
 {
 	Complex number1{ 10, 20 };
 	Complex number2{ -5, 0 };
@@ -36,11 +34,9 @@ bool testNotEquals()
 		cout << "Test equals " << number1 << " != " << number2 << " passed" << endl;
 	else
 		cout << "Test equals " << number1 << " != " << number2 << " failed" << endl;
-
-	return result;
 }
 
-bool testSum()
+void testSum()
 {
 	Complex answer{ 11.5, 8 };
 	Complex number1{ 5, 5 };
@@ -52,11 +48,9 @@ bool testSum()
 		cout << "Test sum " << number1 << " + " << number2 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test sum " << number1 << " + " << number2 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testSubstract()
+void testSubstract()
 {
 	Complex answer{ 39.5, 1.4 };
 	Complex number1{ 55, 3.3 };
@@ -68,11 +62,9 @@ bool testSubstract()
 		cout << "Test substract " << number1 << " - " << number2 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test substract " << number1 << " - " << number2 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testMultiply()
+void testMultiply()
 {
 	Complex numberBuffer{ 5, 3 };
 	Complex answer{ -1, 47 };
@@ -85,11 +77,9 @@ bool testMultiply()
 		cout << "Test multiply " << number1 << " * " << number2 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test multiply " << number1 << " * " << number2 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testDivide()
+void testDivide()
 {
 	Complex numberBuffer{ -2, 1 };
 	Complex answer{ -1.5, -0.5 };
@@ -102,11 +92,9 @@ bool testDivide()
 		cout << "Test divide " << number1 << " / " << number2 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test divide " << number1 << " / " << number2 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testSumEqual()
+void testSumEqual()
 {
 	Complex numberBuffer{ 5, 5 };
 	Complex answer{ 11.5, 8 };
@@ -119,11 +107,9 @@ bool testSumEqual()
 		cout << "Test " << numberBuffer << " += " << number2 << " " << number1 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test " << numberBuffer << " += " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testSubstractEqual()
+void testSubstractEqual()
 {
 	Complex numberBuffer{ 5, 5 };
 	Complex answer{ -1.5, 2 };
@@ -136,11 +122,9 @@ bool testSubstractEqual()
 		cout << "Test " << numberBuffer << " -= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test " << numberBuffer << " -= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testMultiplyEqual()
+void testMultiplyEqual()
 {
 	Complex numberBuffer{ 5, 3 };
 	Complex answer{ -1, 47 };
@@ -153,11 +137,9 @@ bool testMultiplyEqual()
 		cout << "Test " << numberBuffer << " *= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test " << numberBuffer << " *= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testDivideEqual()
+void testDivideEqual()
 {
 	Complex numberBuffer{ -2, 1 };
 	Complex answer{ -1.5, -0.5 };
@@ -170,11 +152,9 @@ bool testDivideEqual()
 		cout << "Test " << numberBuffer << " /= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test " << numberBuffer << " /= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testParse(const string& str)
+void testParse(const string& str)
 {
 	istringstream istrm(str);
 	Complex z;
@@ -187,7 +167,6 @@ bool testParse(const string& str)
 	{
 		cout << "Read error: " << str << " -> " << z << endl;
 	}
-	return istrm.good();
 }
 
 int main()

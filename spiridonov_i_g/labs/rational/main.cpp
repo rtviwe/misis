@@ -12,7 +12,7 @@ Rational operator-(const Rational& lhs, const Rational& rhs);
 Rational operator*(const Rational& lhs, const Rational& rhs);
 Rational operator/(const Rational& lhs, const Rational& rhs);
 
-bool testEquals()
+void testEquals()
 {
 	Rational number1{ 10, 20 };
 	Rational number2{ 10, 20 };
@@ -22,11 +22,9 @@ bool testEquals()
 		cout << "Test equals " << number1 << " == " << number2 << " passed" << endl;
 	else
 		cout << "Test equals " << number1 << " == " << number2 << " failed" << endl;
-
-	return result;
 }
 
-bool testNotEquals()
+void testNotEquals()
 {
 	Rational number1{ 10, 20 };
 	Rational number2{ 50, 8 };
@@ -36,11 +34,9 @@ bool testNotEquals()
 		cout << "Test not equals " << number1 << " != " << number2 << " passed" << endl;
 	else
 		cout << "Test not equals " << number1 << " != " << number2 << " failed" << endl;
-
-	return result;
 }
 
-bool testSum()
+void testSum()
 {
 	Rational number1{ 10, 2 };
 	Rational number2{ 15, 6 };
@@ -51,11 +47,9 @@ bool testSum()
 		cout << "Test sum " << number1 << " + " << number2 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test sum " << number1 << " + " << number2 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testSubstract()
+void testSubstract()
 {
 	Rational number1{ 3, 4 };
 	Rational number2{ 1, 2 };
@@ -66,11 +60,9 @@ bool testSubstract()
 		cout << "Test substract " << number1 << " - " << number2 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test substract " << number1 << " - " << number2 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testMultiply()
+void testMultiply()
 {
 	Rational number1{ 3, -4 };
 	Rational number2{ 1, 2 };
@@ -81,11 +73,9 @@ bool testMultiply()
 		cout << "Test multiply " << number1 << " * " << number2 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test multiply " << number1 << " * " << number2 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testDivide()
+void testDivide()
 {
 	Rational number1{ 5, 4 };
 	Rational number2{ 3, 2 };
@@ -96,11 +86,9 @@ bool testDivide()
 		cout << "Test divide " << number1 << " / " << number2 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test divide " << number1 << " / " << number2 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testSumEqual()
+void testSumEqual()
 {
 	Rational numberBuffer{ 10, 2 };
 	Rational number1{ 10, 2 };
@@ -113,11 +101,9 @@ bool testSumEqual()
 		cout << "Test " << numberBuffer << " += " << number2 << " " << number1 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test " << numberBuffer << " += " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testSubstractEqual()
+void testSubstractEqual()
 {
 	Rational numberBuffer{ 1, 2 };
 	Rational number1{ 1, 2 };
@@ -130,11 +116,9 @@ bool testSubstractEqual()
 		cout << "Test " << numberBuffer << " -= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test " << numberBuffer << " -= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testMultiplyEqual()
+void testMultiplyEqual()
 {
 	Rational numberBuffer{ 1, 2 };
 	Rational number1{ 1, 2 };
@@ -147,11 +131,9 @@ bool testMultiplyEqual()
 		cout << "Test " << numberBuffer << " *= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test " << numberBuffer << " *= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testDivideEqual()
+void testDivideEqual()
 {
 	Rational numberBuffer{ 5, 4 };
 	Rational number1{ 5, 4 };
@@ -164,11 +146,9 @@ bool testDivideEqual()
 		cout << "Test " << numberBuffer << " /= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
 	else
 		cout << "Test " << numberBuffer << " /= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-
-	return result;
 }
 
-bool testParse(const string& str)
+void testParse(const string& str)
 {
 	istringstream istrm(str);
 	Rational number;
@@ -182,18 +162,15 @@ bool testParse(const string& str)
 		answer = "error";
 
 	cout << "Read " << answer << " : " << str << " -> " << number << endl;
-	return istrm.good();
 }
 
-bool testConstructor(Rational& number, int num, int den)
+void testConstructor(Rational& number, int num, int den)
 {
 	bool result = (number.getNumerator() == num) && (number.getDenominator() == den);
 	if (result)
 		cout << "Test constructor " << number << " passed" << endl;
 	else
 		cout << "Test constructor " << number << " failed" << endl;
-
-	return result;
 }
 
 int main()

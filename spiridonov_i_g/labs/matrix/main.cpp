@@ -5,36 +5,57 @@
 
 using namespace std;
 
-bool testDynamicArrayConstructor()
+void testDynamicArrayConstructor(DynamicArray& dynamicArray, int size, int* data)
 {
+	bool result = (dynamicArray.getSize() == size) && (*dynamicArray.getData() == *data);
 
+	if (result)
+		cout << "Test constructor " /*<< dynamicArray*/ << " passed" << endl;
+	else
+		cout << "Test constructor " /*<< dynamicArray*/ << " failed" << endl;
 }
 
-void testDynamicArray()
+void testIndexer()
 {
-	DynamicArray dynamicArray1;
-	DynamicArray dynamicArray2(5);
-	DynamicArray dynamicArray3(dynamicArray2);
+	/*
+	T& operator=(const T& o)
+	{
+	    if (this != &o)
+		{
+			
+		}
+		return *this;
+	}
+
+	// должна работать такая конструкция
+	x = y = z;
+	*/
+	DynamicArray dynamicArray(5);
 
 	for (int i(0); i < 5; i++)
 	{
-		dynamicArray2[i] = i;
+		dynamicArray[i] = i;
 	}
 
 	for (int i(0); i < 5; i++)
 	{
-		cout << dynamicArray2[i] << endl;
+		cout << dynamicArray[i] << endl;
 	}
 	cout << endl;
 
-	dynamicArray3[1] = 10;
+	dynamicArray[1] = 10;
 	for (int i(0); i < 5; i++)
 	{
-		cout << dynamicArray3[i] << endl;
+		cout << dynamicArray[i] << endl;
 	}
 	cout << endl;
 
-	cout << dynamicArray2[1] << endl;
+	cout << dynamicArray[1] << endl;
+}
+
+void testResize()
+{
+
 }
 
 void testMatrix()
@@ -83,8 +104,14 @@ void testMatrix()
 
 int main()
 {
-	testDynamicArray();
-	testMatrix();
+	DynamicArray dynamicArray1;
+	testDynamicArrayConstructor(dynamicArray1, 0, new int[0]);
+	DynamicArray dynamicArray2(5);
+	testDynamicArrayConstructor(dynamicArray2, 5, new int[5]{ 0, 0, 0, 0, 0 });
+	DynamicArray dynamicArray3(dynamicArray2);
+	testDynamicArrayConstructor(dynamicArray3, 5, new int[5]{ 0, 0, 0, 0, 0 });
 
 	return 0;
 }
+
+// сделать стек на списке
