@@ -10,7 +10,9 @@ DynamicArray::DynamicArray()
 DynamicArray::DynamicArray(const int size)
 {
 	if (size_ < 0)
+	{
 		throw std::exception("Size should not be negative");
+	}
 
 	size_ = size;
 	data_ = new int[size_];
@@ -42,24 +44,26 @@ void DynamicArray::setSize(int size)
 	int* newData = new int[size];
 
 	for (int i(0); i < size_; i++)
+	{
 		newData[i] = data_[i];
+	}
 
 	data_ = newData;
 	size_ = size;
 }
 
-int* DynamicArray::getData()
-{
-	return data_;
-}
-
-void DynamicArray::setData(int* data)
-{
-	data_ = data;
-}
-
 int& DynamicArray::operator[](const int i)
 {
+	if (i < 0)
+	{
+		throw std::exception("Index should not be negative");
+	}
+
+	if (i > size_)
+	{
+		throw std::exception("Index should be less than size of array");
+	}
+
 	return data_[i];
 }
 

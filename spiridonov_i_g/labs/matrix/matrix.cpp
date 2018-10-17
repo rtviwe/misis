@@ -3,54 +3,91 @@
 
 Matrix::Matrix()
 {
-	size_ = 0;
-	arrays_ = new DynamicArray[size_];
+	rowSize_ = 0;
+	columnSize_ = 0;
+	data_ = new int*[rowSize_];
 }
 
-Matrix::Matrix(const int size)
+Matrix::Matrix(const int rowSize, const int columnSize)
 {
-	if (size_ < 0)
-		throw std::exception("Size should not be negative");
-
-	size_ = size;
-	arrays_ = new DynamicArray[size_];
-}
-
-Matrix::Matrix(DynamicArray* arrays)
-{
-	size_ = arrays->getSize();
-	arrays_ = new DynamicArray[size_];
-
-	for (int i(0); i < size_; i++)
+	if (rowSize < 0)
 	{
-		DynamicArray* temp = new DynamicArray(arrays[i]);
-		arrays_[i] = *temp;
+		throw std::exception("Size of row should not be negative");
+	}
+
+	if (columnSize < 0)
+	{
+		throw std::exception("Size of column should not be negative");
+	}
+
+	rowSize_ = rowSize;
+	columnSize_ = columnSize;
+	data_ = new int*[rowSize_];
+
+	for (int i(0); i < rowSize_; i++)
+	{
+		data_[i] = new int[columnSize_];
+
+		for (int j(0); j < columnSize_; j++)
+		{
+			data_[i][j] = 0;
+		}
 	}
 }
 
 Matrix::Matrix(const Matrix& obj)
 {
-	size_ = obj.size_;
-	arrays_ = new DynamicArray[size_];
+	rowSize_ = obj.rowSize_;
+	columnSize_ = obj.columnSize_;
+	data_ = new int*[rowSize_];
 
-	for (int i(0); i < size_; i++)
+	for (int i(0); i < rowSize_; i++)
 	{
-		DynamicArray* temp = new DynamicArray(obj.arrays_[i]);
-		arrays_[i] = *temp;
+		data_[i] = new int[columnSize_];
+
+		for (int j(0); j < columnSize_; j++)
+		{
+			data_[i][j] = obj.data_[i][j];
+		}
 	}
 }
 
-int Matrix::getSize()
+int& Matrix::getElementAt(const int rowSize, const int columnSize)
 {
-	return size_;
+	if (rowSize < 0)
+	{
+		throw std::exception("Size of row should not be negative");
+	}
+
+	if (columnSize < 0)
+	{
+		throw std::exception("Size of column should not be negative");
+	}
+
+	if (rowSize < rowSize_)
+	{
+		throw std::exception("Row size should be less than row size of matrix");
+	}
+
+	if (columnSize < columnSize_)
+	{
+		throw std::exception("Column size should be less than column size of matrix");
+	}
+
+	return data_[rowSize][columnSize];
 }
 
-DynamicArray& Matrix::operator[](const int i)
+int Matrix::getRowSize() const
 {
-	return arrays_[i];
+	return rowSize_;
+}
+
+int Matrix::getColumnSize() const
+{
+	return columnSize_;
 }
 
 Matrix::~Matrix()
 {
-	delete[] arrays_;
+	delete[] data_;
 }

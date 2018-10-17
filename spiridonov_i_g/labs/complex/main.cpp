@@ -27,7 +27,7 @@ void testEquals()
 void testNotEquals()
 {
 	Complex number1{ 10, 20 };
-	Complex number2{ -5, 0 };
+	Complex number2{ -5, 2 };
 
 	bool result = number1 != number2;
 	if (result)

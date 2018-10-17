@@ -1,2 +1,2 @@
-add_executable(matrix matrix.cpp matrix.hpp main.cpp dynamicArray.cpp dynamicArray.hpp)
+add_executable(matrix matrix.cpp matrix.hpp main.cpp)
 set_property(TARGET matrix PROPERTY CXX_STANDARD 14)

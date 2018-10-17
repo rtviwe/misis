@@ -12,9 +12,6 @@ public:
 	int getSize();
 	void setSize(int size);
 
-	void setData(int* data);
-	int* getData();
-
 	int& operator[](const int i);
 
 	~DynamicArray();

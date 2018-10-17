@@ -2,26 +2,23 @@
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
 
-#include "dynamicArray.hpp"
-
-class DynamicArray;
-
 class Matrix
 {
 public:
 	Matrix();
-	Matrix(const int size);
-	Matrix(DynamicArray* arrays);
-	Matrix(const Matrix& copy);
+	Matrix(const int rowSize, const int columnSize);
+	Matrix(const Matrix& obj);
 
-	int getSize();
+	int getRowSize() const;
+	int getColumnSize() const;
 
-	DynamicArray& operator[](const int i);
+	int& getElementAt(const int rowSize, const int columnSize);
 
 	~Matrix();
 private:
-	int size_{ 0 };
-	DynamicArray* arrays_{ nullptr };
+	int rowSize_{ 0 };
+	int columnSize_{ 0 };
+	int** data_{ nullptr };
 };
 
 #endif

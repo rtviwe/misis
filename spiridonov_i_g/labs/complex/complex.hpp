@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include <sstream>
 
 struct Complex
 {
@@ -23,7 +22,7 @@ struct Complex
 
 	Complex& operator/=(const Complex& rhs);
 	Complex& operator/=(const double rhs);
-
+	
 	std::ostream& writeTo(std::ostream& ostrm) const;
 	std::istream& readFrom(std::istream& istrim);
 
