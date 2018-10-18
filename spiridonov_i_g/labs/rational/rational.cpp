@@ -17,7 +17,6 @@ Rational::Rational(const int numerator, const int denominator)
 	normalize();
 }
 
-
 int Rational::getNumerator()
 {
 	return num;

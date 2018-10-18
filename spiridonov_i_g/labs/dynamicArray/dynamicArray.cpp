@@ -41,6 +41,7 @@ int DynamicArray::getSize()
 
 void DynamicArray::setSize(int size)
 {
+	size_ = size;
 	int* newData = new int[size];
 
 	for (int i(0); i < size_; i++)
@@ -49,7 +50,6 @@ void DynamicArray::setSize(int size)
 	}
 
 	data_ = newData;
-	size_ = size;
 }
 
 int& DynamicArray::operator[](const int i)

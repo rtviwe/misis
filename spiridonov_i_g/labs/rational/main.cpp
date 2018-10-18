@@ -191,11 +191,11 @@ int main()
 	testParse("{s/4}");
 
 	Rational num1{ 4, 2 };
-	Rational num2{ 4, -2 };
-	Rational num3{ -4, -2 };
-	Rational num4{ -4, 2 };
 	testConstructor(num1, 2, 1);
+	Rational num2{ 4, -2 };
 	testConstructor(num2, -2, 1);
+	Rational num3{ -4, -2 };
 	testConstructor(num3, 2, 1);
+	Rational num4{ -4, 2 };
 	testConstructor(num4, -2, 1);
 }
