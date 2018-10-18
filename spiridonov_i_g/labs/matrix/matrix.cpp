@@ -64,12 +64,12 @@ int& Matrix::getElementAt(const int rowSize, const int columnSize)
 		throw std::exception("Size of column should not be negative");
 	}
 
-	if (rowSize < rowSize_)
+	if (rowSize > rowSize_)
 	{
 		throw std::exception("Row size should be less than row size of matrix");
 	}
 
-	if (columnSize < columnSize_)
+	if (columnSize > columnSize_)
 	{
 		throw std::exception("Column size should be less than column size of matrix");
 	}
