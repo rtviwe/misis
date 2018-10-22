@@ -94,6 +94,14 @@ void testResize()
 		cout << "Test resize data safety failed" << endl;
 }
 
+void testOperatorAssign(DynamicArray& dynamicArray1, DynamicArray& dynamicArray2)
+{
+	int b = 0;
+	dynamicArray1 = dynamicArray2;
+
+	int a = 0;
+}
+
 int main()
 {
 	DynamicArray dynamicArray1;
@@ -106,6 +114,10 @@ int main()
 	testIndexer();
 	testIndexerOutOfRange();
 	testResize();
+
+	DynamicArray dynamicArray4(5);
+	DynamicArray dynamicArray5(5);
+	testOperatorAssign(dynamicArray4, dynamicArray5);
 
 	return 0;
 }

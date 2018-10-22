@@ -54,10 +54,10 @@ int main()
 	int* row3_ptr = row3;
 	int* matrix[3] = { row1_ptr, row2_ptr, row3_ptr };
 	int** matrix_ptr = matrix;
-	testConstructor(matrix2, 3, 3, matrix);
+	testConstructor(matrix2, 3, 3, matrix_ptr);
 
 	Matrix matrix3(matrix2);
-	testConstructor(matrix3, 3, 3, matrix);
+	testConstructor(matrix3, 3, 3, matrix_ptr);
 
 	testElementAt();
 

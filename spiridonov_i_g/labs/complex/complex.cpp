@@ -1,8 +1,5 @@
 #include <iostream>
-#include <sstream>
 #include "complex.hpp"
-
-using namespace std;
 
 Complex::Complex(const double real) : Complex(real, 0.0)
 {
@@ -75,13 +72,13 @@ Complex& Complex::operator/=(const Complex& rhs)
 	return *this;
 }
 
-ostream& Complex::writeTo(ostream& ostrm) const
+std::ostream& Complex::writeTo(std::ostream& ostrm) const
 {
 	ostrm << leftBrace << re << separator << im << rightBrace;
 	return ostrm;
 }
 
-istream& Complex::readFrom(istream& istrm)
+std::istream& Complex::readFrom(std::istream& istrm)
 {
 	char leftBrace(0);
 	double real(0.0);
@@ -96,18 +93,18 @@ istream& Complex::readFrom(istream& istrm)
 			im = imaganary;
 		}
 		else {
-			istrm.setstate(ios_base::failbit);
+			istrm.setstate(std::ios_base::failbit);
 		}
 	}
 	return istrm;
 }
 
-ostream& operator<<(ostream& ostrm, const Complex& rhs)
+std::ostream& operator<<(std::ostream& ostrm, const Complex& rhs)
 {
 	return rhs.writeTo(ostrm);
 }
 
-istream& operator>>(istream& istrm, Complex& rhs)
+std::istream& operator>>(std::istream& istrm, Complex& rhs)
 {
 	return rhs.readFrom(istrm);
 }

@@ -4,14 +4,6 @@
 
 using namespace std;
 
-ostream& operator<<(ostream& ostrm, const Rational& rhs);
-istream& operator>>(istream& istrm, Rational& rhs);
-
-Rational operator+(const Rational& lhs, const Rational& rhs);
-Rational operator-(const Rational& lhs, const Rational& rhs);
-Rational operator*(const Rational& lhs, const Rational& rhs);
-Rational operator/(const Rational& lhs, const Rational& rhs);
-
 void testEquals()
 {
 	Rational number1{ 10, 20 };

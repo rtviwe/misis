@@ -87,6 +87,24 @@ int Matrix::getColumnSize() const
 	return columnSize_;
 }
 
+Matrix& Matrix::operator=(const Matrix& rhs)
+{
+	columnSize_ = rhs.columnSize_;
+	rowSize_ = rhs.rowSize_;
+
+	for (int i(0); i < rowSize_; i++)
+	{
+		data_[i] = new int[columnSize_];
+
+		for (int j(0); j < columnSize_; j++)
+		{
+			data_[i][j] = rhs.data_[i][j];
+		}
+	}
+
+	return *this;
+}
+
 Matrix::~Matrix()
 {
 	delete[] data_;

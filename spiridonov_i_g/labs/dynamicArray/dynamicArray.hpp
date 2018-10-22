@@ -14,6 +14,8 @@ public:
 
 	int& operator[](const int i);
 
+	DynamicArray& operator=(const DynamicArray& rhs);
+
 	~DynamicArray();
 private:
 	int size_{ 0 };

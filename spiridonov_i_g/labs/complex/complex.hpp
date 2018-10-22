@@ -1,4 +1,6 @@
 #pragma once
+#ifndef COMPLEX_HPP
+#define COMPLEX_HPP
 
 #include <iostream>
 
@@ -33,3 +35,14 @@ struct Complex
 	static const char separator{ ',' };
 	static const char rightBrace{ '}' };
 };
+
+
+std::ostream& operator<<(std::ostream& ostrm, const Complex& rhs);
+std::istream& operator>>(std::istream& istrm, Complex& rhs);
+
+Complex operator+(const Complex& lhs, const Complex& rhs);
+Complex operator-(const Complex& lhs, const Complex& rhs);
+Complex operator*(const Complex& lhs, const Complex& rhs);
+Complex operator/(const Complex& lhs, const Complex& rhs);
+
+#endif

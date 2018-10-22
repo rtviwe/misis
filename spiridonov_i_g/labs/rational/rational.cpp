@@ -2,8 +2,6 @@
 #include <sstream>
 #include "rational.hpp"
 
-using namespace std;
-
 Rational::Rational(const int numerator)
 {
 	setNumerator(numerator);
@@ -106,13 +104,13 @@ Rational& Rational::operator/=(const Rational& rhs)
 	return *this;
 }
 
-ostream& Rational::writeTo(ostream& ostrm) const
+std::ostream& Rational::writeTo(std::ostream& ostrm) const
 {
 	ostrm << leftBrace << num << separator << den << rightBrace;
 	return ostrm;
 }
 
-istream& Rational::readFrom(istream& istrm)
+std::istream& Rational::readFrom(std::istream& istrm)
 {
 	char leftBrace(0);
 	int numerator(0);
@@ -132,7 +130,7 @@ istream& Rational::readFrom(istream& istrm)
 		}
 		else
 		{
-			istrm.setstate(ios_base::failbit);
+			istrm.setstate(std::ios_base::failbit);
 		}
 	}
 	return istrm;
@@ -162,12 +160,12 @@ void Rational::normalize()
 	}
 }
 
-ostream& operator<<(ostream& ostrm, const Rational& rhs)
+std::ostream& operator<<(std::ostream& ostrm, const Rational& rhs)
 {
 	return rhs.writeTo(ostrm);
 }
 
-istream& operator>>(istream& istrm, Rational& rhs)
+std::istream& operator>>(std::istream& istrm, Rational& rhs)
 {
 	return rhs.readFrom(istrm);
 }

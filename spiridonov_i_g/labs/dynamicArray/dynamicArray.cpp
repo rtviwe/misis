@@ -11,7 +11,7 @@ DynamicArray::DynamicArray(const int size)
 {
 	if (size_ < 0)
 	{
-		throw std::exception("Size should not be negative");
+		throw std::out_of_range("Size should not be negative");
 	}
 
 	size_ = size;
@@ -56,15 +56,33 @@ int& DynamicArray::operator[](const int i)
 {
 	if (i < 0)
 	{
-		throw std::exception("Index should not be negative");
+		throw std::out_of_range("Index should not be negative");
 	}
 
 	if (i > size_)
 	{
-		throw std::exception("Index should be less than size of array");
+		throw std::out_of_range("Index should be less than size of array");
 	}
 
 	return data_[i];
+}
+
+DynamicArray& DynamicArray::operator=(const DynamicArray& rhs)
+{
+	if (this != &rhs)
+	{
+		size_ = rhs.size_;
+
+		delete[] data_;
+		data_ = new int[size_];
+
+		for (int i(0); i < size_; i++)
+		{
+			data_[i] = rhs.data_[i];
+		}
+	}
+
+	return *this;
 }
 
 DynamicArray::~DynamicArray()

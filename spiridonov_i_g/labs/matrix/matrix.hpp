@@ -14,6 +14,8 @@ public:
 
 	int& getElementAt(const int rowSize, const int columnSize);
 
+	Matrix& operator=(const Matrix& rhs);
+
 	~Matrix();
 private:
 	int rowSize_{ 0 };

@@ -1,4 +1,6 @@
 #pragma once
+#ifndef RATIONAL_HPP
+#define RATIONAL_HPP
 
 #include <iostream>
 
@@ -42,3 +44,13 @@ private:
 	int num{ 0 };
 	int den{ 1 };
 };
+
+std::ostream& operator<<(std::ostream& ostrm, const Rational& rhs);
+std::istream& operator>>(std::istream& istrm, Rational& rhs);
+
+Rational operator+(const Rational& lhs, const Rational& rhs);
+Rational operator-(const Rational& lhs, const Rational& rhs);
+Rational operator*(const Rational& lhs, const Rational& rhs);
+Rational operator/(const Rational& lhs, const Rational& rhs);
+
+#endif

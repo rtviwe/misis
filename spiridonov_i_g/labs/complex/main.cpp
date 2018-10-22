@@ -4,14 +4,6 @@
 
 using namespace std;
 
-ostream& operator<<(ostream& ostrm, const Complex& rhs);
-istream& operator>>(istream& istrm, Complex& rhs);
-
-Complex operator+(const Complex& lhs, const Complex& rhs);
-Complex operator-(const Complex& lhs, const Complex& rhs);
-Complex operator*(const Complex& lhs, const Complex& rhs);
-Complex operator/(const Complex& lhs, const Complex& rhs);
-
 void testEquals()
 {
 	Complex number1{ 10, 20 };
