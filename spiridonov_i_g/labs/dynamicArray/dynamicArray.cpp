@@ -1,22 +1,9 @@
 #include <iostream>
 #include "DynamicArray.hpp"
 
-DynamicArray::DynamicArray()
-{
-	size_ = 0;
-	data_ = new int[size_];
-}
-
 DynamicArray::DynamicArray(const int size)
+	: size_(size), data_(new int[size_])
 {
-	if (size_ < 0)
-	{
-		throw std::out_of_range("Size should not be negative");
-	}
-
-	size_ = size;
-	data_ = new int[size_];
-
 	for (int i(0); i < size_; i++)
 	{
 		data_[i] = 0;
@@ -24,22 +11,22 @@ DynamicArray::DynamicArray(const int size)
 }
 
 DynamicArray::DynamicArray(const DynamicArray& obj)
+	: size_(obj.size_), data_(new int[size_])
 {
-	size_ = obj.size_;
-	data_ = new int[size_];
-
-	for (int i(0); i < size_; i++)
-	{
-		data_[i] = obj.data_[i];
-	}
+	std::copy(obj.data_, obj.data_ + obj.size_, data_);
 }
 
-int DynamicArray::getSize()
+DynamicArray::~DynamicArray()
+{
+	delete[] data_;
+}
+
+int DynamicArray::getSize() const
 {
 	return size_;
 }
 
-void DynamicArray::setSize(int size)
+void DynamicArray::setSize(const int size)
 {
 	size_ = size;
 	int* newData = new int[size];
@@ -71,21 +58,14 @@ DynamicArray& DynamicArray::operator=(const DynamicArray& rhs)
 {
 	if (this != &rhs)
 	{
-		size_ = rhs.size_;
-
-		delete[] data_;
-		data_ = new int[size_];
-
-		for (int i(0); i < size_; i++)
+		if (size_ < rhs.size_)
 		{
-			data_[i] = rhs.data_[i];
+			int* newData(new int[rhs.size_]);
+			delete[] data_;
+			data_ = newData;
 		}
+		std::copy(rhs.data_, rhs.data_ + rhs.size_, data_);
+		size_ = rhs.size_;
 	}
-
 	return *this;
-}
-
-DynamicArray::~DynamicArray()
-{
-	delete[] data_;
 }

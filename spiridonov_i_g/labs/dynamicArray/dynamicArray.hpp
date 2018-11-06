@@ -5,18 +5,17 @@
 class DynamicArray
 {
 public:
-	DynamicArray();
-	DynamicArray(const int size);
+	DynamicArray() = default;
+	explicit DynamicArray(const int size);
 	DynamicArray(const DynamicArray& obj);
 
-	int getSize();
-	void setSize(int size);
+	~DynamicArray();
+
+	int getSize() const;
+	void setSize(const int size);
 
 	int& operator[](const int i);
-
 	DynamicArray& operator=(const DynamicArray& rhs);
-
-	~DynamicArray();
 private:
 	int size_{ 0 };
 	int* data_{ nullptr };
