@@ -5,11 +5,15 @@
 template<typename T>
 struct Item
 {
-	Item();
-	explicit Item(const T data);
+	Item() = default;
 
-	T data;
-	Item* next;
+	Item(T data, Item<T>* next)
+		: data_(data), next_(next)
+	{
+	}
+
+	T data_;
+	Item<T>* next_;
 };
 
 #endif

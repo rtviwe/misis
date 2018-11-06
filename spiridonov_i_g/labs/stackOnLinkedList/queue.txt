@@ -1,0 +1,37 @@
+#pragma once
+#ifndef QUEUE_HPP
+#define QUEUE_HPP
+
+// Очередь на динамическом массиве с плавающими концами
+class Queue
+{
+public:
+	// обязательно
+	Queue() = default;
+	Queue(const Queue& queue);
+	Queue& operator=(const Queue& queue);
+	~Queue();
+	// обязательно
+
+	// методы из АТД
+	void push(const int item);
+	int pop();
+	int top();
+	bool isEmpty();
+	// методы из АТД
+
+	// указатель на массив
+	int* data_{ nullptr };
+
+	// размер массива
+	int size_{ 0 };
+
+	// начало массива
+	int i_start{ 1 };
+	// конец массива
+	int i_last{ 0 };
+private:
+	int* data{ nullptr };
+};
+
+#endif
