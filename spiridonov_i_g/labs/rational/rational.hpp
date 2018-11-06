@@ -11,11 +11,13 @@ public:
 	explicit Rational(const int numerator);
 	Rational(const int numerator, const int denominator);
 
-	int getNumerator();
-	void setNumerator(int num);
+	~Rational() = default;
 
-	int getDenominator();
-	void setDenominator(int den);
+	int getNumerator() const;
+	void setNumerator(const int num);
+
+	int getDenominator() const;
+	void setDenominator(const int den);
 
 	bool operator==(const Rational& rhs) const;
 	bool operator!=(const Rational& rhs) const;
@@ -41,8 +43,8 @@ public:
 	static const char separator{ '/' };
 	static const char rightBrace{ '}' };
 private:
-	int num{ 0 };
-	int den{ 1 };
+	int num_{ 0 };
+	int den_{ 1 };
 };
 
 std::ostream& operator<<(std::ostream& ostrm, const Rational& rhs);

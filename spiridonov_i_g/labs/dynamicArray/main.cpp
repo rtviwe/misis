@@ -78,7 +78,7 @@ void testResize()
 		cout << "Test resize from " << oldSize << " to " << newSize << " passed" << endl;
 	else
 		cout << "Test resize from " << oldSize << " to " << newSize << " failed" << endl;
-	
+
 	bool result2 = true;
 	for (int i(0); i < newSize; i++)
 	{

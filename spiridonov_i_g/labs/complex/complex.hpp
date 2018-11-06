@@ -10,6 +10,8 @@ struct Complex
 	explicit Complex(const double real);
 	Complex(const double real, const double imaginary);
 
+	~Complex() = default;
+
 	bool operator==(const Complex& rhs) const;
 	bool operator!=(const Complex& rhs) const;
 
@@ -24,7 +26,7 @@ struct Complex
 
 	Complex& operator/=(const Complex& rhs);
 	Complex& operator/=(const double rhs);
-	
+
 	std::ostream& writeTo(std::ostream& ostrm) const;
 	std::istream& readFrom(std::istream& istrim);
 

@@ -3,13 +3,11 @@
 
 Complex::Complex(const double real) : Complex(real, 0.0)
 {
-
 }
 
-Complex::Complex(const double real, const double imaginary) : re(real), im(imaginary)
+Complex::Complex(const double real, const double imaginary)
+	: re(real), im(imaginary)
 {
-	re = real;
-	im = imaginary;
 }
 
 bool Complex::operator==(const Complex& rhs) const

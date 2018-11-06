@@ -5,9 +5,11 @@
 class Matrix
 {
 public:
-	Matrix();
+	Matrix() = default;
 	Matrix(const int rowSize, const int columnSize);
 	Matrix(const Matrix& obj);
+
+	~Matrix();
 
 	int getRowSize() const;
 	int getColumnSize() const;
@@ -15,8 +17,6 @@ public:
 	int& getElementAt(const int rowSize, const int columnSize);
 
 	Matrix& operator=(const Matrix& rhs);
-
-	~Matrix();
 private:
 	int rowSize_{ 0 };
 	int columnSize_{ 0 };

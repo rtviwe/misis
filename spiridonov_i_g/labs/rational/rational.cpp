@@ -3,38 +3,36 @@
 #include "rational.hpp"
 
 Rational::Rational(const int numerator)
+	: num_(numerator), den_(1)
 {
-	setNumerator(numerator);
-	setDenominator(1);
 }
 
 Rational::Rational(const int numerator, const int denominator)
+	: num_(numerator), den_(denominator)
 {
-	setNumerator(numerator);
-	setDenominator(denominator);
 	normalize();
 }
 
-int Rational::getNumerator()
+int Rational::getNumerator() const
 {
-	return num;
+	return num_;
 }
 
-void Rational::setNumerator(int numerator)
+void Rational::setNumerator(const int numerator)
 {
-	num = numerator;
+	num_ = numerator;
 }
 
-int Rational::getDenominator()
+int Rational::getDenominator() const
 {
-	return den;
+	return den_;
 }
 
-void Rational::setDenominator(int denominator)
+void Rational::setDenominator(const int denominator)
 {
-	if (den != 0) 
+	if (den_ != 0)
 	{
-		den = denominator;
+		den_ = denominator;
 	}
 	else
 	{
@@ -44,7 +42,7 @@ void Rational::setDenominator(int denominator)
 
 bool Rational::operator==(const Rational& rhs) const
 {
-	return (num == rhs.num) && (den == rhs.den);
+	return (num_ == rhs.num_) && (den_ == rhs.den_);
 }
 
 bool Rational::operator!=(const Rational& rhs) const
@@ -74,39 +72,39 @@ Rational& Rational::operator/=(const int rhs)
 
 Rational& Rational::operator+=(const Rational& rhs)
 {
-	num = num * rhs.den + rhs.num * den;
-	den *= rhs.den;
+	num_ = num_ * rhs.den_ + rhs.num_ * den_;
+	den_ *= rhs.den_;
 	normalize();
 	return *this;
 }
 
 Rational& Rational::operator-=(const Rational& rhs)
 {
-	num = num * rhs.den - rhs.num * den;
-	den *= rhs.den;
+	num_ = num_ * rhs.den_ - rhs.num_ * den_;
+	den_ *= rhs.den_;
 	normalize();
 	return *this;
 }
 
 Rational& Rational::operator*=(const Rational& rhs)
 {
-	num *= rhs.num;
-	den *= rhs.den;
+	num_ *= rhs.num_;
+	den_ *= rhs.den_;
 	normalize();
 	return *this;
 }
 
 Rational& Rational::operator/=(const Rational& rhs)
 {
-	num *= rhs.den;
-	den *= rhs.num;
+	num_ *= rhs.den_;
+	den_ *= rhs.num_;
 	normalize();
 	return *this;
 }
 
 std::ostream& Rational::writeTo(std::ostream& ostrm) const
 {
-	ostrm << leftBrace << num << separator << den << rightBrace;
+	ostrm << leftBrace << num_ << separator << den_ << rightBrace;
 	return ostrm;
 }
 
@@ -125,8 +123,8 @@ std::istream& Rational::readFrom(std::istream& istrm)
 		if ((Rational::leftBrace == leftBrace) && (Rational::separator == separator)
 			&& (Rational::rightBrace == rightBrace))
 		{
-			num = numerator;
-			den = denominator;
+			num_ = numerator;
+			den_ = denominator;
 		}
 		else
 		{
@@ -146,17 +144,17 @@ int gcd(int a, int b)
 
 void Rational::normalize()
 {
-	if (num != 0 && den != 0)
+	if (num_ != 0 && den_ != 0)
 	{
-		int div = gcd(num, den);
-		num /= div;
-		den /= div;
+		int div = gcd(num_, den_);
+		num_ /= div;
+		den_ /= div;
 	}
 
-	if (den < 0)
+	if (den_ < 0)
 	{
-		num = -num;
-		den = -den;
+		num_ = -num_;
+		den_ = -den_;
 	}
 }
 
