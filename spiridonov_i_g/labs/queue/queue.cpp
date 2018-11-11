@@ -1,0 +1,56 @@
+#include "queue.hpp"
+#include <iostream>
+
+Queue::Queue(int size) : size_(size), start_(0), end_(0)
+{
+	data_ = new int[size];
+}
+
+Queue::Queue(const Queue& obj)
+	: size_(obj.size_), start_(obj.start_), end_(obj.end_), data_(new int[size_])
+{
+
+}
+
+bool Queue::isEmpty() 
+{
+	return start_ == end_;
+}
+
+bool Queue::isFull() 
+{
+	return (end_ + 1) % size_ == start_;
+}
+
+int Queue::top() 
+{
+	return data_[end_];
+}
+
+int Queue::pop() 
+{
+	int result = data_[start_];
+	start_ = (start_ + 1) % size_;
+	return result;
+}
+
+void Queue::enqueue(int value) 
+{
+	if (isFull()) 
+	{
+		throw std::exception("Queue is full");
+	}
+
+	data_[end_] = value;
+	end_ = (end_ + 1) % size_;
+}
+
+Queue& Queue::operator=(const Queue&) 
+{
+	return *this;
+}
+
+Queue::~Queue() 
+{
+	delete[] data_;
+}

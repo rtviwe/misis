@@ -11,19 +11,19 @@ public:
 
 	Stack(const Stack& obj)
 	{
-		Node<T>* objHead = obj.head_;
-		head_ = new Node<T>();
+		Node<T>* old_head = obj.head_;
+		head_ = new Node<T>(old_head->data_, old_head->next_);
+		Node<T> head_ptr = *head_;
 
-		while (objHead != nullptr)
+		while (old_head->next_ != nullptr)
 		{
-			Node<T>* newNode = new Node<T>();
-			newNode->next_ = head_;
-			head_ = newNode;
+			head_->next_ = new Node<T>(old_head->next_->data_, old_head->next_->next_);
 
-			head_->data_ = objHead->data_;
+			old_head = old_head->next_;
 			head_ = head_->next_;
-			objHead = objHead->next_;
 		}
+
+		*head_ = head_ptr;
 	}
 
 	~Stack()
@@ -56,11 +56,11 @@ public:
 
 	const T& pop()
 	{
-		Node<T>* downerNode = head_->next_;
+		Node<T>* nextNode = head_->next_;
 		delete head_;
-		head_ = downerNode;
+		head_ = nextNode;
 
-		if (head_->next_ == nullptr) {
+		if (head_ == nullptr) {
 			std::exception("Stack is empty");
 		}
 

@@ -10,6 +10,6 @@ int main()
 	stack1.push(2);
 	Stack<int> stack2(stack1);
 
-	cout << stack1.pop() << endl;
-	cout << stack1.pop() << endl;
+	cout << stack2.pop() << endl;
+	cout << stack2.pop() << endl;
 }
