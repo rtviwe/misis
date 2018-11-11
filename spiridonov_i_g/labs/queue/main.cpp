@@ -18,4 +18,6 @@ int main()
 	q1.enqueue(9);
 	cout << q1.pop() << endl;
 	q1.enqueue(10);
+	cout << q1.pop() << endl;
+	cout << q1.top() << endl;
 }

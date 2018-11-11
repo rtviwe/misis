@@ -26,11 +26,16 @@ bool Queue::isFull()
 
 int Queue::top() 
 {
-	return data_[end_];
+	return data_[start_];
 }
 
 int Queue::pop() 
 {
+	if (isEmpty())
+	{
+		throw std::exception("Queue is empty");
+	}
+
 	int result = data_[start_];
 	start_ = (start_ + 1) % size_;
 	return result;
