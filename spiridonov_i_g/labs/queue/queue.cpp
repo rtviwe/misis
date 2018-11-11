@@ -1,15 +1,17 @@
 #include "queue.hpp"
 #include <iostream>
 
-Queue::Queue(int size) : size_(size), start_(0), end_(0)
+Queue::Queue(int size) 
+	: size_(size), start_(0), end_(0)
 {
-	data_ = new int[size];
+	data_ = new int[size_];
 }
 
 Queue::Queue(const Queue& obj)
-	: size_(obj.size_), start_(obj.start_), end_(obj.end_), data_(new int[size_])
+	: size_(obj.size_), start_(obj.start_), end_(obj.end_)
 {
-
+	data_ = new int[size_];
+	std::copy(obj.data_, obj.data_ + obj.size_, data_);
 }
 
 bool Queue::isEmpty() 
@@ -45,8 +47,19 @@ void Queue::enqueue(int value)
 	end_ = (end_ + 1) % size_;
 }
 
-Queue& Queue::operator=(const Queue&) 
+Queue& Queue::operator=(const Queue& rhs) 
 {
+	if (this != &rhs)
+	{
+		if (size_ < rhs.size_)
+		{
+			int* newData(new int[rhs.size_]);
+			delete[] data_;
+			data_ = newData;
+		}
+		std::copy(rhs.data_, rhs.data_ + rhs.size_, data_);
+		size_ = rhs.size_;
+	}
 	return *this;
 }
 
