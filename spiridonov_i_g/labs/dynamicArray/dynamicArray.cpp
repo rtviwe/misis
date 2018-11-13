@@ -29,14 +29,7 @@ int DynamicArray::getSize() const
 void DynamicArray::setSize(const int size)
 {
 	size_ = size;
-	int* newData = new int[size];
-
-	for (int i(0); i < size_; i++)
-	{
-		newData[i] = data_[i];
-	}
-
-	data_ = newData;
+	std::copy(data_, data_ + size_, data_);
 }
 
 int& DynamicArray::operator[](const int i)

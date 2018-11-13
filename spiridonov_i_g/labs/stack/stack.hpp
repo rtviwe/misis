@@ -40,15 +40,12 @@ public:
 			head_ = newHead;
 			Node<T>* objHead = rhs.head_;
 
-			while (rhs.head_ != nullptr)
+			while (objHead->next_ != nullptr)
 			{
-				Node<T>* newNode = new Node<T>();
-				newNode->next_ = head_;
-				head_ = newNode;
+				head_->next_ = new Node<T>(objHead->next_->data_, objHead->next_->next_);
 
-				head_->data_ = objHead->data_;
-				head_ = head_->next_;
 				objHead = objHead->next_;
+				head_ = head_->next_;
 			}
 		}
 		return *this;

@@ -7,7 +7,7 @@ struct Node
 {
 	Node() = default;
 
-	Node(T data, Node<T>* next)
+	Node(const T data, Node<T>* next)
 		: data_(data), next_(next)
 	{
 	}
