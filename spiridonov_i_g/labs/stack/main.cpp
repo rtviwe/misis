@@ -5,19 +5,21 @@ using namespace std;
 
 int main()
 {
-	Stack<int> stack1;
-	stack1.push(1);
-	stack1.push(2);
-	Stack<int> stack2(stack1);
-
-	cout << stack2.pop() << endl;
-	cout << stack2.pop() << endl;
-
-	stack2.push(10);
-	stack2.push(20);
-	stack2.push(30);
-	cout << stack2.pop() << endl;
-	cout << stack2.pop() << endl;
-	stack2.push(40);
-	cout << stack2.pop() << endl;
+	Stack<double> stack1;
+	stack1.push(0.0);
+	stack1.push(8.1);
+	stack1.push(3.0);
+	stack1.push(0.4);
+	stack1.push(1.3);
+	stack1.push(7.7);
+	stack1.push(6.5);
+	cout << "stack1 = " << stack1 << endl;
+	double k = stack1.top();
+	cout << "stack1.top() = " << k << endl;
+	stack1.push(2.1);
+	cout << "stack1.push(2.1) = " << stack1 << endl;
+	stack1.pop();
+	cout << "stack1.pop() = " << stack1 << endl;
+	Stack<double> stack2(stack1);
+	cout << "stack2 = " << stack2 << endl;
 }

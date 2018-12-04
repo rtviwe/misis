@@ -2,6 +2,7 @@
 #ifndef STACK_HPP
 #define STACK_HPP
 
+#include <iostream>
 #include "node.hpp"
 
 template<class T>
@@ -9,75 +10,110 @@ class Stack {
 public:
 	Stack() = default;
 
-	Stack(const Stack& obj)
+	Stack(const Stack& stack)
 	{
-		Node<T>* old_head = obj.head_;
-		head_ = new Node<T>(old_head->data_, old_head->next_);
-		Node<T> head_ptr = *head_;
+		Stack<T> newStack;
+		Node<T>* temp = stack.head_;
 
-		while (old_head->next_ != nullptr)
+		while (temp != nullptr)
 		{
-			head_->next_ = new Node<T>(old_head->next_->data_, old_head->next_->next_);
-
-			old_head = old_head->next_;
-			head_ = head_->next_;
+			newStack.push(temp->data_);
+			temp = temp->next_;
 		}
 
-		*head_ = head_ptr;
+		temp = newStack.head_;
+		
+		while (temp != nullptr)
+		{
+			push(temp->data_);
+			temp = temp->next_;
+		}
 	}
 
 	~Stack()
 	{
-		delete head_;
+		while (!isEmpty())
+		{
+			pop();
+		}
 	}
 
 	Stack& operator=(const Stack<T>& rhs)
 	{
-		if (this != &rhs)
+		Stack<T> newStack;
+		Node<T>* temp = rhs.head_;
+
+		while (temp != nullptr)
 		{
-			Node<T>* newHead;
-			delete head_;
-			head_ = newHead;
-			Node<T>* objHead = rhs.head_;
-
-			while (objHead->next_ != nullptr)
-			{
-				head_->next_ = new Node<T>(objHead->next_->data_, objHead->next_->next_);
-
-				objHead = objHead->next_;
-				head_ = head_->next_;
-			}
+			newStack.push(temp->data_);
+			temp = temp->next_;
 		}
+
+		temp = newStack.head_;
+
+		while (temp != nullptr)
+		{
+			push(temp->data_);
+			temp = temp->next_;
+		}
+
 		return *this;
 	}
 
 	const T& pop()
 	{
-		Node<T>* nextNode = head_->next_;
-		delete head_;
-		head_ = nextNode;
-
-		if (head_ == nullptr) {
-			std::exception("Stack is empty");
+		if (!isEmpty())
+		{
+			Node<T>* oldNode(head_);
+			head_ = oldNode->next_;
+			delete oldNode;
 		}
-
-		return head_->data_;
+		else
+		{
+			throw std::exception("Stack is empty");
+		}
 	}
 
 	void push(const T& data)
 	{
-		if (head_ == nullptr) {
-			head_ = new Node<T>();
+		head_ = new Node<T>(data, head_);
+	}
+
+	const T& top() const
+	{
+		if (!isEmpty())
+		{
+			return head_->data_;
 		}
+		else
+		{
+			throw std::exception("Stack is empty");
+		}
+	}
 
-		head_->data_ = data;
+	bool isEmpty() const
+	{
+		return (head_ == nullptr);
+	}
 
-		Node<T>* upperNode = new Node<T>();
-		upperNode->next_ = head_;
-		head_ = upperNode;
+	std::ostream& writeTo(std::ostream& ostrm) const
+	{
+		Node<T>* temp = head_;
+		while (temp != nullptr)
+		{
+			ostrm << temp->data_ << " ";
+			temp = temp->next_;
+		}
+		return ostrm;
 	}
 private:
 	Node<T>* head_{ nullptr };
 };
+
+template<class T>
+inline std::ostream& operator<<(std::ostream& ostrm, const Stack<T>& a)
+{
+	return a.writeTo(ostrm);
+}
 
 #endif

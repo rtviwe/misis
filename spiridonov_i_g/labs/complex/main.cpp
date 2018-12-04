@@ -177,4 +177,6 @@ int main()
 	testParse("{8.9,9}");
 	testParse("{\t\t\t8.9, \n9}");
 	testParse("   {8.9,9");
+
+	return 0;
 }
