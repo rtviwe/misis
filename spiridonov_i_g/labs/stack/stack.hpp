@@ -7,113 +7,93 @@
 
 template<class T>
 class Stack {
-public:
-	Stack() = default;
+ public:
+    Stack() = default;
 
-	Stack(const Stack& stack)
-	{
-		Stack<T> newStack;
-		Node<T>* temp = stack.head_;
+    Stack(const Stack& stack) {
+        Stack<T> newStack;
+        Node<T>* temp = stack.head_;
 
-		while (temp != nullptr)
-		{
-			newStack.push(temp->data_);
-			temp = temp->next_;
-		}
+        while (temp != nullptr) {
+            newStack.push(temp->data_);
+            temp = temp->next_;
+        }
 
-		temp = newStack.head_;
-		
-		while (temp != nullptr)
-		{
-			push(temp->data_);
-			temp = temp->next_;
-		}
-	}
+        temp = newStack.head_;
 
-	~Stack()
-	{
-		while (!isEmpty())
-		{
-			pop();
-		}
-	}
+        while (temp != nullptr) {
+            push(temp->data_);
+            temp = temp->next_;
+        }
+    }
 
-	Stack& operator=(const Stack<T>& rhs)
-	{
-		Stack<T> newStack;
-		Node<T>* temp = rhs.head_;
+    ~Stack() {
+        while (!isEmpty()) {
+            pop();
+        }
+    }
 
-		while (temp != nullptr)
-		{
-			newStack.push(temp->data_);
-			temp = temp->next_;
-		}
+    Stack& operator=(const Stack<T>& rhs) {
+        Stack<T> newStack;
+        Node<T>* temp = rhs.head_;
 
-		temp = newStack.head_;
+        while (temp != nullptr) {
+            newStack.push(temp->data_);
+            temp = temp->next_;
+        }
 
-		while (temp != nullptr)
-		{
-			push(temp->data_);
-			temp = temp->next_;
-		}
+        temp = newStack.head_;
 
-		return *this;
-	}
+        while (temp != nullptr) {
+            push(temp->data_);
+            temp = temp->next_;
+        }
 
-	const T& pop()
-	{
-		if (!isEmpty())
-		{
-			Node<T>* oldNode(head_);
-			head_ = oldNode->next_;
-			delete oldNode;
-		}
-		else
-		{
-			throw std::exception("Stack is empty");
-		}
-	}
+        return *this;
+    }
 
-	void push(const T& data)
-	{
-		head_ = new Node<T>(data, head_);
-	}
+    const T& pop() {
+        if (!isEmpty()) {
+            Node<T>* oldNode(head_);
+            head_ = oldNode->next_;
+            delete oldNode;
+        } else {
+            throw std::exception("Stack is empty");
+        }
+    }
 
-	const T& top() const
-	{
-		if (!isEmpty())
-		{
-			return head_->data_;
-		}
-		else
-		{
-			throw std::exception("Stack is empty");
-		}
-	}
+    void push(const T& data) {
+        head_ = new Node<T>(data, head_);
+    }
 
-	bool isEmpty() const
-	{
-		return (head_ == nullptr);
-	}
+    const T& top() const {
+        if (!isEmpty()) {
+            return head_->data_;
+        } else {
+            throw std::exception("Stack is empty");
+        }
+    }
 
-	std::ostream& writeTo(std::ostream& ostrm) const
-	{
-		Node<T>* temp = head_;
-		while (temp != nullptr)
-		{
-			ostrm << temp->data_ << " ";
-			temp = temp->next_;
-		}
-		return ostrm;
-	}
-private:
-	Node<T>* head_{ nullptr };
+    bool isEmpty() const {
+        return (head_ == nullptr);
+    }
+
+    std::ostream& writeTo(std::ostream& ostrm) const {
+        Node<T>* temp = head_;
+        while (temp != nullptr) {
+            ostrm << temp->data_ << " ";
+            temp = temp->next_;
+        }
+        return ostrm;
+    }
+
+ private:
+    Node<T>* head_{ nullptr };
 };
 
 template<class T>
-inline std::ostream& operator<<(std::ostream& ostrm, const Stack<T>& a)
-{
-	return a.writeTo(ostrm);
+inline std::ostream& operator<<(std::ostream& ostrm, const Stack<T>& a) {
+    return a.writeTo(ostrm);
 }
 
 #endif

@@ -1,2 +1,2 @@
-add_executable(rational rational.cpp rational.hpp main.cpp)
+add_library(rational rational.hpp rational.cpp)
 set_property(TARGET rational PROPERTY CXX_STANDARD 14)

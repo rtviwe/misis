@@ -1,2 +1,2 @@
-add_executable(stack main.cpp stack.hpp node.hpp node.cpp stack.cpp)
+add_library(stack stack.hpp node.hpp)
 set_property(TARGET stack PROPERTY CXX_STANDARD 14)
