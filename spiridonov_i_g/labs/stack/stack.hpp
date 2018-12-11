@@ -1,3 +1,5 @@
+// Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
+
 #pragma once
 #ifndef STACK_HPP
 #define STACK_HPP

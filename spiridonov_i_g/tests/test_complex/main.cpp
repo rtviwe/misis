@@ -1,13 +1,15 @@
+// Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
+
 #include <iostream>
 #include <sstream>
-#include "rational.hpp"
+#include "complex"
 
 using namespace std;
 
 void testEquals()
 {
-    Rational number1{ 10, 20 };
-    Rational number2{ 10, 20 };
+    Complex number1{ 10, 20 };
+    Complex number2{ 10, 20 };
 
     bool result = number1 == number2;
     if (result)
@@ -18,23 +20,24 @@ void testEquals()
 
 void testNotEquals()
 {
-    Rational number1{ 10, 20 };
-    Rational number2{ 50, 8 };
+    Complex number1{ 10, 20 };
+    Complex number2{ -5, 2 };
 
     bool result = number1 != number2;
     if (result)
-        cout << "Test not equals " << number1 << " != " << number2 << " passed" << endl;
+        cout << "Test equals " << number1 << " != " << number2 << " passed" << endl;
     else
-        cout << "Test not equals " << number1 << " != " << number2 << " failed" << endl;
+        cout << "Test equals " << number1 << " != " << number2 << " failed" << endl;
 }
 
 void testSum()
 {
-    Rational number1{ 10, 2 };
-    Rational number2{ 15, 6 };
-    Rational answer{ 15, 2 };
+    Complex answer{ 11.5, 8 };
+    Complex number1{ 5, 5 };
+    Complex number2{ 6.5, 3 };
+    Complex sum = number1 + number2;
 
-    bool result = (answer == (number1 + number2));
+    bool result = sum == answer;
     if (result)
         cout << "Test sum " << number1 << " + " << number2 << " = " << answer << " passed" << endl;
     else
@@ -43,11 +46,12 @@ void testSum()
 
 void testSubstract()
 {
-    Rational number1{ 3, 4 };
-    Rational number2{ 1, 2 };
-    Rational answer{ 1, 4 };
+    Complex answer{ 39.5, 1.4 };
+    Complex number1{ 55, 3.3 };
+    Complex number2{ 15.5, 1.9 };
+    Complex substract = number1 - number2;
 
-    bool result = (answer == (number1 - number2));
+    bool result = substract == answer;
     if (result)
         cout << "Test substract " << number1 << " - " << number2 << " = " << answer << " passed" << endl;
     else
@@ -56,11 +60,13 @@ void testSubstract()
 
 void testMultiply()
 {
-    Rational number1{ 3, -4 };
-    Rational number2{ 1, 2 };
-    Rational answer{ -3, 8 };
+    Complex numberBuffer{ 5, 3 };
+    Complex answer{ -1, 47 };
+    Complex number1{ 5, 3 };
+    Complex number2{ 4, 7 };
+    Complex multiply = number1 * number2;
 
-    bool result = (answer == (number1 * number2));
+    bool result = multiply == answer;
     if (result)
         cout << "Test multiply " << number1 << " * " << number2 << " = " << answer << " passed" << endl;
     else
@@ -69,11 +75,13 @@ void testMultiply()
 
 void testDivide()
 {
-    Rational number1{ 5, 4 };
-    Rational number2{ 3, 2 };
-    Rational answer{ 5, 6 };
+    Complex numberBuffer{ -2, 1 };
+    Complex answer{ -1.5, -0.5 };
+    Complex number1{ -2, 1 };
+    Complex number2{ 1, -1 };
+    Complex divide = number1 / number2;
 
-    bool result = (answer == (number1 / number2));
+    bool result = divide == answer;
     if (result)
         cout << "Test divide " << number1 << " / " << number2 << " = " << answer << " passed" << endl;
     else
@@ -82,13 +90,13 @@ void testDivide()
 
 void testSumEqual()
 {
-    Rational numberBuffer{ 10, 2 };
-    Rational number1{ 10, 2 };
-    Rational number2{ 15, 6 };
-    Rational answer{ 15, 2 };
-
+    Complex numberBuffer{ 5, 5 };
+    Complex answer{ 11.5, 8 };
+    Complex number1{ 5, 5 };
+    Complex number2{ 6.5, 3 };
     number1 += number2;
-    bool result = (answer == number1);
+
+    bool result = number1 == answer;
     if (result)
         cout << "Test " << numberBuffer << " += " << number2 << " " << number1 << " = " << answer << " passed" << endl;
     else
@@ -97,13 +105,13 @@ void testSumEqual()
 
 void testSubstractEqual()
 {
-    Rational numberBuffer{ 1, 2 };
-    Rational number1{ 1, 2 };
-    Rational number2{ 3, 4 };
-    Rational answer{ -1, 4 };
-
+    Complex numberBuffer{ 5, 5 };
+    Complex answer{ -1.5, 2 };
+    Complex number1{ 5, 5 };
+    Complex number2{ 6.5, 3 };
     number1 -= number2;
-    bool result = (answer == number1);
+
+    bool result = number1 == answer;
     if (result)
         cout << "Test " << numberBuffer << " -= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
     else
@@ -112,13 +120,13 @@ void testSubstractEqual()
 
 void testMultiplyEqual()
 {
-    Rational numberBuffer{ 1, 2 };
-    Rational number1{ 1, 2 };
-    Rational number2{ 3, 4 };
-    Rational answer{ 3, 8 };
-
+    Complex numberBuffer{ 5, 3 };
+    Complex answer{ -1, 47 };
+    Complex number1{ 5, 3 };
+    Complex number2{ 4, 7 };
     number1 *= number2;
-    bool result = (answer == number1);
+
+    bool result = number1 == answer;
     if (result)
         cout << "Test " << numberBuffer << " *= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
     else
@@ -127,13 +135,13 @@ void testMultiplyEqual()
 
 void testDivideEqual()
 {
-    Rational numberBuffer{ 5, 4 };
-    Rational number1{ 5, 4 };
-    Rational number2{ 3, 2 };
-    Rational answer{ 5, 6 };
-
+    Complex numberBuffer{ -2, 1 };
+    Complex answer{ -1.5, -0.5 };
+    Complex number1{ -2, 1 };
+    Complex number2{ 1, -1 };
     number1 /= number2;
-    bool result = (answer == number1);
+
+    bool result = number1 == answer;
     if (result)
         cout << "Test " << numberBuffer << " /= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
     else
@@ -143,26 +151,16 @@ void testDivideEqual()
 void testParse(const string& str)
 {
     istringstream istrm(str);
-    Rational number;
-    istrm >> number;
-
-    string answer;
-
+    Complex z;
+    istrm >> z;
     if (istrm.good())
-        answer = "success";
+    {
+        cout << "Read success: " << str << " -> " << z << endl;
+    }
     else
-        answer = "error";
-
-    cout << "Read " << answer << " : " << str << " -> " << number << endl;
-}
-
-void testConstructor(Rational& number, int num, int den)
-{
-    bool result = (number.getNumerator() == num) && (number.getDenominator() == den);
-    if (result)
-        cout << "Test constructor " << number << " passed" << endl;
-    else
-        cout << "Test constructor " << number << " failed" << endl;
+    {
+        cout << "Read error: " << str << " -> " << z << endl;
+    }
 }
 
 int main()
@@ -178,16 +176,9 @@ int main()
     testMultiplyEqual();
     testDivideEqual();
 
-    testParse("{2/4}");
-    testParse("{ \n2/   4}");
-    testParse("{s/4}");
+    testParse("{8.9,9}");
+    testParse("{\t\t\t8.9, \n9}");
+    testParse("   {8.9,9");
 
-    Rational num1{ 4, 2 };
-    testConstructor(num1, 2, 1);
-    Rational num2{ 4, -2 };
-    testConstructor(num2, -2, 1);
-    Rational num3{ -4, -2 };
-    testConstructor(num3, 2, 1);
-    Rational num4{ -4, 2 };
-    testConstructor(num4, -2, 1);
+    return 0;
 }

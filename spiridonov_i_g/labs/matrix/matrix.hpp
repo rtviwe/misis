@@ -1,3 +1,5 @@
+// Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
+
 #pragma once
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
@@ -17,9 +19,9 @@ class Matrix {
 
     Matrix& operator=(const Matrix& rhs);
  private:
-    int rowSize_{ 0 };
-    int columnSize_{ 0 };
-    int** data_{ nullptr };
+    int rowSize_ { 0 };
+    int columnSize_ { 0 };
+    int** data_ { nullptr };
 };
 
 #endif

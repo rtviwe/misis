@@ -1,3 +1,5 @@
+// Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
+
 #pragma once
 #ifndef RATIONAL_HPP
 #define RATIONAL_HPP
@@ -38,13 +40,13 @@ class Rational {
     std::ostream& writeTo(std::ostream& ostrm) const;
     std::istream& readFrom(std::istream& istrim);
 
-    static const char leftBrace{ '{' };
-    static const char separator{ '/' };
-    static const char rightBrace{ '}' };
+    static const char leftBrace { '{' };
+    static const char separator { '/' };
+    static const char rightBrace { '}' };
 
  private:
-    int num_{ 0 };
-    int den_{ 1 };
+    int num_ { 0 };
+    int den_ { 1 };
 };
 
 std::ostream& operator<<(std::ostream& ostrm, const Rational& rhs);
