@@ -5,11 +5,10 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     DynamicArray dynamicArray1(10);
 
-    for (int i = 0; i < 10; ++i) {
+    for (int i(0); i < 10; i++) {
         dynamicArray1[i] = (i * i) / 2.0;
     }
     cout << dynamicArray1 << endl << endl;
@@ -17,9 +16,7 @@ int main()
 
     try {
         dynamicArray1[11];
-    }
-    catch (out_of_range)
-    {
+    } catch (out_of_range) {
         cout << "Out of range!" << endl;
     }
 

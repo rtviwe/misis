@@ -5,8 +5,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     Queue queue1(10);
     Queue queue2(queue1);
     queue1.enqueue(1);
