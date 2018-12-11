@@ -1,7 +1,7 @@
 // Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
 
 #include <iostream>
-#include "queue.hpp"
+#include "../../labs/queue/queue.hpp"
 
 using namespace std;
 
@@ -22,4 +22,11 @@ int main()
     queue1.enqueue(10);
     cout << "queue1.enqueue(10) = " << queue1.top() << endl;
     cout << "queue1.top() = " << queue1.top() << endl;
+
+    Queue queue3(10);
+    try {
+        queue3.pop();
+    } catch (std::exception error) {
+        cout << "queue3 is empty" << endl;
+    }
 }

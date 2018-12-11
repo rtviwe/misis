@@ -17,11 +17,16 @@ class Matrix {
 
     int& getElementAt(const int rowSize, const int columnSize);
 
+    std::ostream& writeTo(std::ostream& ostrm) const;
+
     Matrix& operator=(const Matrix& rhs);
+
  private:
     int rowSize_ { 0 };
     int columnSize_ { 0 };
     int** data_ { nullptr };
 };
+
+std::ostream& operator<<(std::ostream& ostrm, const Matrix& matrix);
 
 #endif

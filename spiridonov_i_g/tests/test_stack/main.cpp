@@ -1,12 +1,12 @@
 // Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
 
 #include <iostream>
-#include "stack.hpp"
+#include "../../labs/stack/stack.hpp"
+#include "../../labs/stack/node.hpp"
 
 using namespace std;
 
-int main()
-{
+int main() {
     Stack<double> stack1;
     stack1.push(0.0);
     stack1.push(8.1);

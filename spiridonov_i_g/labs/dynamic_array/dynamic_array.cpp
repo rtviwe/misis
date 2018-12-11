@@ -53,3 +53,14 @@ DynamicArray& DynamicArray::operator=(const DynamicArray& rhs) {
     }
     return *this;
 }
+
+std::ostream& DynamicArray::writeTo(std::ostream& ostrm) const {
+    for (int i(0); i < size_; i++) {
+        ostrm << '{' << data_[i] << '}' << ((i != size_ - 1) ? ", " : ";");
+    }
+    return ostrm;
+}
+
+std::ostream& operator<<(std::ostream& ostrm, const DynamicArray& dynamicArray) {
+    return dynamicArray.writeTo(ostrm);
+}

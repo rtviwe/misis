@@ -76,3 +76,20 @@ Matrix& Matrix::operator=(const Matrix& rhs) {
 
     return *this;
 }
+
+std::ostream& operator<<(std::ostream& ostrm, const Matrix& matrix) {
+    return matrix.writeTo(ostrm);
+}
+
+std::ostream& Matrix::writeTo(std::ostream& ostrm) const
+{
+    for (int i = 0; i < rowSize_; i += 1)
+    {
+        for (int j = 0; j < columnSize_; j += 1)
+        {
+            ostrm << data_[i][j] << " ";
+        }
+        ostrm << std::endl;
+    }
+    return ostrm;
+}

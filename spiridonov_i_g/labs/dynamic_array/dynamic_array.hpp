@@ -15,6 +15,8 @@ class DynamicArray {
     int getSize() const;
     void setSize(const int size);
 
+    std::ostream& writeTo(std::ostream& ostrm) const;
+
     int& operator[](const int i);
     DynamicArray& operator=(const DynamicArray& rhs);
 
@@ -22,5 +24,7 @@ class DynamicArray {
     int size_ { 0 };
     int* data_ { nullptr };
 };
+
+std::ostream& operator<<(std::ostream& ostrm, const DynamicArray& dynamicArray);
 
 #endif

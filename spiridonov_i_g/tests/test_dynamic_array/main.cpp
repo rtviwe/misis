@@ -1,113 +1,41 @@
 // Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
 
 #include <iostream>
-#include "dynamicArray.hpp"
+#include "../../labs/dynamic_array/dynamic_array.hpp"
 
 using namespace std;
 
-void testConstructor(DynamicArray& dynamicArray, int size, int* data)
-{
-    bool result = dynamicArray.getSize() == size;
-
-    if (result)
-        cout << "Test constructor size with size " << size << " passed" << endl;
-    else
-        cout << "Test constructor size with size " << size << " failed" << endl;
-
-    bool result2 = true;
-    for (int i(0); i < dynamicArray.getSize(); i++)
-    {
-        if (dynamicArray[i] != data[i])
-        {
-            result2 = false;
-        }
-    }
-
-    cout << "Test constructor data with data: ";
-    for (int i(0); i < size; i++)
-    {
-        cout << dynamicArray[i] << " ";
-    }
-    if (result2)
-        cout << "passed" << endl;
-    else
-        cout << "failed" << endl;
-}
-
-void testIndexer()
-{
-    int answer = 10;
-    DynamicArray dynamicArray(5);
-    dynamicArray[0] = answer;
-
-    bool result = dynamicArray[0] == 10;
-    if (result)
-        cout << "Test indexer dynamicArray[0] == " << answer << " passed" << endl;
-    else
-        cout << "Test indexer dynamicArray[0] == " << answer << " failed" << endl;
-}
-
-void testIndexerOutOfRange()
-{
-    DynamicArray dynamicArray(5);
-
-    bool hasException = false;
-    try
-    {
-        dynamicArray[10] = 10;
-    }
-    catch (exception)
-    {
-        hasException = true;
-    }
-
-    if (hasException)
-        cout << "Test indexer out of range dynamicArray[10] == 10 passed" << endl;
-    else
-        cout << "Test indexer out of range dynamicArray[10] == 10 failed" << endl;
-}
-
-void testResize()
-{
-    int oldSize = 5;
-    int newSize = 3;
-    DynamicArray dynamicArray(oldSize);
-
-    dynamicArray.setSize(newSize);
-
-    bool result = dynamicArray.getSize() == newSize;
-    if (result)
-        cout << "Test resize from " << oldSize << " to " << newSize << " passed" << endl;
-    else
-        cout << "Test resize from " << oldSize << " to " << newSize << " failed" << endl;
-
-    bool result2 = true;
-    for (int i(0); i < newSize; i++)
-    {
-        if (dynamicArray[i] != 0)
-        {
-            result2 = false;
-        }
-    }
-
-    if (result2)
-        cout << "Test resize data safety passed" << endl;
-    else
-        cout << "Test resize data safety failed" << endl;
-}
-
 int main()
 {
-    DynamicArray dynamicArray1;
-    testConstructor(dynamicArray1, 0, new int[0]);
-    DynamicArray dynamicArray2(5);
-    testConstructor(dynamicArray2, 5, new int[5]{ 0, 0, 0, 0, 0 });
-    DynamicArray dynamicArray3(dynamicArray2);
-    testConstructor(dynamicArray2, 5, new int[5]{ 0, 0, 0, 0, 0 });
+    DynamicArray dynamicArray1(10);
 
-    testIndexer();
-    testIndexerOutOfRange();
-    testResize();
+    for (int i = 0; i < 10; ++i) {
+        dynamicArray1[i] = (i * i) / 2.0;
+    }
+    cout << dynamicArray1 << endl << endl;
+    double a = dynamicArray1[3];
+
+    try {
+        dynamicArray1[11];
+    }
+    catch (out_of_range)
+    {
+        cout << "Out of range!" << endl;
+    }
+
+    cout << endl;
+
+    DynamicArray dynamicArray2;
+    dynamicArray2 = dynamicArray1;
+    cout << dynamicArray2 << endl;
+
+    cout << "Resize to 7" << endl;
+    dynamicArray2.setSize(7);
+    cout << dynamicArray2 << endl;
+
+    cout << "Resize to 70" << endl;
+    dynamicArray2.setSize(70);
+    cout << dynamicArray2 << endl;
 
     return 0;
 }

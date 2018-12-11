@@ -2,183 +2,98 @@
 
 #include <iostream>
 #include <sstream>
-#include "complex"
+#include "../../labs/complex/complex.hpp"
 
 using namespace std;
 
-void testEquals()
-{
-    Complex number1{ 10, 20 };
-    Complex number2{ 10, 20 };
-
-    bool result = number1 == number2;
-    if (result)
-        cout << "Test equals " << number1 << " == " << number2 << " passed" << endl;
-    else
-        cout << "Test equals " << number1 << " == " << number2 << " failed" << endl;
-}
-
-void testNotEquals()
-{
-    Complex number1{ 10, 20 };
-    Complex number2{ -5, 2 };
-
-    bool result = number1 != number2;
-    if (result)
-        cout << "Test equals " << number1 << " != " << number2 << " passed" << endl;
-    else
-        cout << "Test equals " << number1 << " != " << number2 << " failed" << endl;
-}
-
-void testSum()
-{
-    Complex answer{ 11.5, 8 };
-    Complex number1{ 5, 5 };
-    Complex number2{ 6.5, 3 };
-    Complex sum = number1 + number2;
-
-    bool result = sum == answer;
-    if (result)
-        cout << "Test sum " << number1 << " + " << number2 << " = " << answer << " passed" << endl;
-    else
-        cout << "Test sum " << number1 << " + " << number2 << " = " << answer << " failed" << endl;
-}
-
-void testSubstract()
-{
-    Complex answer{ 39.5, 1.4 };
-    Complex number1{ 55, 3.3 };
-    Complex number2{ 15.5, 1.9 };
-    Complex substract = number1 - number2;
-
-    bool result = substract == answer;
-    if (result)
-        cout << "Test substract " << number1 << " - " << number2 << " = " << answer << " passed" << endl;
-    else
-        cout << "Test substract " << number1 << " - " << number2 << " = " << answer << " failed" << endl;
-}
-
-void testMultiply()
-{
-    Complex numberBuffer{ 5, 3 };
-    Complex answer{ -1, 47 };
-    Complex number1{ 5, 3 };
-    Complex number2{ 4, 7 };
-    Complex multiply = number1 * number2;
-
-    bool result = multiply == answer;
-    if (result)
-        cout << "Test multiply " << number1 << " * " << number2 << " = " << answer << " passed" << endl;
-    else
-        cout << "Test multiply " << number1 << " * " << number2 << " = " << answer << " failed" << endl;
-}
-
-void testDivide()
-{
-    Complex numberBuffer{ -2, 1 };
-    Complex answer{ -1.5, -0.5 };
-    Complex number1{ -2, 1 };
-    Complex number2{ 1, -1 };
-    Complex divide = number1 / number2;
-
-    bool result = divide == answer;
-    if (result)
-        cout << "Test divide " << number1 << " / " << number2 << " = " << answer << " passed" << endl;
-    else
-        cout << "Test divide " << number1 << " / " << number2 << " = " << answer << " failed" << endl;
-}
-
-void testSumEqual()
-{
-    Complex numberBuffer{ 5, 5 };
-    Complex answer{ 11.5, 8 };
-    Complex number1{ 5, 5 };
-    Complex number2{ 6.5, 3 };
-    number1 += number2;
-
-    bool result = number1 == answer;
-    if (result)
-        cout << "Test " << numberBuffer << " += " << number2 << " " << number1 << " = " << answer << " passed" << endl;
-    else
-        cout << "Test " << numberBuffer << " += " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-}
-
-void testSubstractEqual()
-{
-    Complex numberBuffer{ 5, 5 };
-    Complex answer{ -1.5, 2 };
-    Complex number1{ 5, 5 };
-    Complex number2{ 6.5, 3 };
-    number1 -= number2;
-
-    bool result = number1 == answer;
-    if (result)
-        cout << "Test " << numberBuffer << " -= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
-    else
-        cout << "Test " << numberBuffer << " -= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-}
-
-void testMultiplyEqual()
-{
-    Complex numberBuffer{ 5, 3 };
-    Complex answer{ -1, 47 };
-    Complex number1{ 5, 3 };
-    Complex number2{ 4, 7 };
-    number1 *= number2;
-
-    bool result = number1 == answer;
-    if (result)
-        cout << "Test " << numberBuffer << " *= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
-    else
-        cout << "Test " << numberBuffer << " *= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-}
-
-void testDivideEqual()
-{
-    Complex numberBuffer{ -2, 1 };
-    Complex answer{ -1.5, -0.5 };
-    Complex number1{ -2, 1 };
-    Complex number2{ 1, -1 };
-    number1 /= number2;
-
-    bool result = number1 == answer;
-    if (result)
-        cout << "Test " << numberBuffer << " /= " << number2 << " " << number1 << " = " << answer << " passed" << endl;
-    else
-        cout << "Test " << numberBuffer << " /= " << number2 << " " << number1 << " = " << answer << " failed" << endl;
-}
-
-void testParse(const string& str)
-{
+bool testParse(const std::string& str) {
     istringstream istrm(str);
     Complex z;
     istrm >> z;
-    if (istrm.good())
-    {
+
+    if (istrm.good()) {
         cout << "Read success: " << str << " -> " << z << endl;
-    }
-    else
-    {
+    } else {
         cout << "Read error: " << str << " -> " << z << endl;
     }
+
+    return istrm.good();
 }
 
-int main()
-{
-    testEquals();
-    testNotEquals();
-    testSum();
-    testSubstract();
-    testMultiply();
-    testDivide();
-    testSumEqual();
-    testSubstractEqual();
-    testMultiplyEqual();
-    testDivideEqual();
+int main() {
+    Complex z(0.0, 0);
+    cout << z << endl;
+
+    z += Complex(8.0, 1);
+    cout << "z + (8.0 +i) = " << z << endl;
+
+    z -= Complex(5.0, 2);
+    cout << "z - (5.0 + 2*i) = " << z << endl;
+
+    z *= 7.0;
+    cout << "z * 7.0 = " << z << endl;
+
+    z *= Complex(2.0, 2);
+    cout << "z * (2.0 + 2*i) = " << z << endl;
+
+    z /= 2.0;
+    cout << "z / 2.0 = " << z << endl;
+
+    z /= Complex(4.0, 3);
+    cout << "z / (4.0 + 3*i) = " << z << endl;
+
+    z += 2.0;
+    cout << "z + 2.0 = " << z << endl;
+
+    z -= 3.1;
+    cout << "z - 3.1 = " << z << endl;
+
+    z += 1;
+    cout << "z + 1 = " << z << endl;
+
+    z -= 4;
+    cout << "z - 4 = " << z << endl;
+
+    z *= 3;
+    cout << "z * 3 = " << z << endl;
+
+    z /= 2;
+    cout << "z / 2 = " << z << endl;
+
+    z += Complex(2);
+    cout << "z + 2 = " << z << endl;
+
+    z += Complex(3.4);
+    cout << "3.4 + z = " << z << endl;
+
+    z += Complex(-1);
+    cout << "(-1) + z = " << z << endl;
+
+    z += Complex(-2.8);
+    cout << "(-2.8) + z = " << z << endl;
+
+    Complex sum(z + Complex(1.0, 2));
+    cout << "z + (1.0, 2) = " << sum << endl;
+
+    Complex minus(z - Complex(2.0, 2));
+    cout << "z - (2.0, 2) = " << minus << endl;
+
+    Complex u(z * Complex(1.0, 2));
+    cout << "z * (1.0, 2) = " << u << endl;
+
+    Complex del(z / Complex(1.0, 2));
+    cout << "z / (1.0, 2) = " << del << endl;
+
+    Complex l(7, 5);
+    bool w = z == l;
+    cout << "z == (7 + 5*i) = " << w << endl;
+
+    Complex h(2, 8);
+    bool s = z != h;
+    cout << "z != (2 + 8*i) = " << s << endl;
 
     testParse("{8.9,9}");
-    testParse("{\t\t\t8.9, \n9}");
-    testParse("   {8.9,9");
-
+    testParse("{8.9, 9}");
+    testParse("{8.9, 9");
     return 0;
 }
