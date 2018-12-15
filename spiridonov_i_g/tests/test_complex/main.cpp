@@ -6,7 +6,7 @@
 
 using namespace std;
 
-bool testParse(const std::string& str) {
+bool testParse(const std::string &str) {
     istringstream istrm(str);
     Complex z;
     istrm >> z;

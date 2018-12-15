@@ -5,14 +5,14 @@
 #include "dynamic_array.hpp"
 
 DynamicArray::DynamicArray(const int size)
-    : size_(size), data_(new int[size_]) {
+        : size_(size), data_(new int[size_]) {
     for (int i(0); i < size_; i++) {
         data_[i] = 0;
     }
 }
 
-DynamicArray::DynamicArray(const DynamicArray& obj)
-    : size_(obj.size_), data_(new int[size_]) {
+DynamicArray::DynamicArray(const DynamicArray &obj)
+        : size_(obj.size_), data_(new int[size_]) {
     std::copy(obj.data_, obj.data_ + obj.size_, data_);
 }
 
@@ -29,7 +29,7 @@ void DynamicArray::setSize(const int size) {
     std::copy(data_, data_ + size_, data_);
 }
 
-int& DynamicArray::operator[](const int i) {
+int &DynamicArray::operator[](const int i) {
     if (i < 0) {
         throw std::out_of_range("Index should not be negative");
     }
@@ -41,10 +41,10 @@ int& DynamicArray::operator[](const int i) {
     return data_[i];
 }
 
-DynamicArray& DynamicArray::operator=(const DynamicArray& rhs) {
+DynamicArray &DynamicArray::operator=(const DynamicArray &rhs) {
     if (this != &rhs) {
         if (size_ < rhs.size_) {
-            int* newData(new int[rhs.size_]);
+            int *newData(new int[rhs.size_]);
             delete[] data_;
             data_ = newData;
         }
@@ -54,13 +54,13 @@ DynamicArray& DynamicArray::operator=(const DynamicArray& rhs) {
     return *this;
 }
 
-std::ostream& DynamicArray::writeTo(std::ostream& ostrm) const {
+std::ostream &DynamicArray::writeTo(std::ostream &ostrm) const {
     for (int i(0); i < size_; i++) {
         ostrm << '{' << data_[i] << '}' << ((i != size_ - 1) ? ", " : ";");
     }
     return ostrm;
 }
 
-std::ostream& operator<<(std::ostream& ostrm, const DynamicArray& dynamicArray) {
+std::ostream &operator<<(std::ostream &ostrm, const DynamicArray &dynamicArray) {
     return dynamicArray.writeTo(ostrm);
 }

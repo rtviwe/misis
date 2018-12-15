@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\complex\;CMake Files\rational\;CMake Files\dynamic_array\;CMake Files\matrix\;CMake Files\queue\;CMake Files\stack\;CMake Files\priority_queue\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="complex">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/complex/complex.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/complex"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\complex\Makefile VERBOSE=1 complex"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\complex\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\complex\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\complex\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="complex/fast">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/complex/complex.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/complex"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\complex\Makefile VERBOSE=1 complex/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\complex\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\complex\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\complex\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rational">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/rational/rational.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/rational"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\rational\Makefile VERBOSE=1 rational"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\rational\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\rational\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\rational\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rational/fast">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/rational/rational.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/rational"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\rational\Makefile VERBOSE=1 rational/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\rational\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\rational\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\rational\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dynamic_array">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/dynamic_array/dynamic_array.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/dynamic_array"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\dynamic_array\Makefile VERBOSE=1 dynamic_array"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\dynamic_array\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\dynamic_array\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\dynamic_array\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dynamic_array/fast">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/dynamic_array/dynamic_array.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/dynamic_array"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\dynamic_array\Makefile VERBOSE=1 dynamic_array/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\dynamic_array\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\dynamic_array\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\dynamic_array\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="matrix">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/matrix/matrix.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/matrix"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\matrix\Makefile VERBOSE=1 matrix"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\matrix\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\matrix\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\matrix\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="matrix/fast">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/matrix/matrix.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/matrix"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\matrix\Makefile VERBOSE=1 matrix/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\matrix\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\matrix\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\matrix\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="queue">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/queue/queue.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/queue"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\queue\Makefile VERBOSE=1 queue"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\queue\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\queue\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\queue\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="queue/fast">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/queue/queue.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/queue"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\queue\Makefile VERBOSE=1 queue/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\queue\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\queue\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\queue\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stack">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/stack/stack.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/stack"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\stack\Makefile VERBOSE=1 stack"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\stack\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\stack\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\stack\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stack/fast">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/stack/stack.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/stack"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\stack\Makefile VERBOSE=1 stack/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\stack\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\stack\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\stack\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="priority_queue">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/priority_queue/priority_queue.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/priority_queue"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue\Makefile VERBOSE=1 priority_queue"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="priority_queue/fast">
+				<Option output="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/priority_queue/priority_queue.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/priority_queue"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue\Makefile VERBOSE=1 priority_queue/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/complex/complex.cpp">
+			<Option target="complex"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/complex/complex.hpp">
+			<Option target="complex"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/dynamic_array/dynamic_array.cpp">
+			<Option target="dynamic_array"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/dynamic_array/dynamic_array.hpp">
+			<Option target="dynamic_array"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/matrix/matrix.cpp">
+			<Option target="matrix"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/matrix/matrix.hpp">
+			<Option target="matrix"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/priority_queue/priority_queue.cpp">
+			<Option target="priority_queue"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/priority_queue/priority_queue.hpp">
+			<Option target="priority_queue"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/queue/queue.cpp">
+			<Option target="queue"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/queue/queue.hpp">
+			<Option target="queue"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/rational/rational.cpp">
+			<Option target="rational"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/rational/rational.hpp">
+			<Option target="rational"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/stack/node.cpp">
+			<Option target="stack"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/stack/node.hpp">
+			<Option target="stack"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/stack/stack.cpp">
+			<Option target="stack"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/stack/stack.hpp">
+			<Option target="stack"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/complex/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\complex\"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/rational/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\rational\"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/dynamic_array/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\dynamic_array\"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/matrix/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\matrix\"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/queue/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\queue\"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/stack/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\stack\"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/priority_queue/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\priority_queue\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

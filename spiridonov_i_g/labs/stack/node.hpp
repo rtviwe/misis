@@ -8,12 +8,12 @@ template<typename T>
 struct Node {
     Node() = default;
 
-    Node(const T data, Node<T>* next)
-        : data_(data), next_(next) {
+    Node(const T data, Node<T> *next)
+            : data_(data), next_(next) {
     }
 
     T data_;
-    Node<T>* next_;
+    Node<T> *next_;
 };
 
 #endif

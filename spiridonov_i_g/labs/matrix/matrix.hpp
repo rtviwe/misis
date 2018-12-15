@@ -5,28 +5,31 @@
 #define MATRIX_HPP
 
 class Matrix {
- public:
+public:
     Matrix() = default;
+
     Matrix(const int rowSize, const int columnSize);
-    Matrix(const Matrix& obj);
+
+    Matrix(const Matrix &obj);
 
     ~Matrix();
 
     int getRowSize() const;
+
     int getColumnSize() const;
 
-    int& getElementAt(const int rowSize, const int columnSize);
+    int &getElementAt(const int rowSize, const int columnSize);
 
-    std::ostream& writeTo(std::ostream& ostrm) const;
+    std::ostream &writeTo(std::ostream &ostrm) const;
 
-    Matrix& operator=(const Matrix& rhs);
+    Matrix &operator=(const Matrix &rhs);
 
- private:
-    int rowSize_ { 0 };
-    int columnSize_ { 0 };
-    int** data_ { nullptr };
+private:
+    int rowSize_{0};
+    int columnSize_{0};
+    int **data_{nullptr};
 };
 
-std::ostream& operator<<(std::ostream& ostrm, const Matrix& matrix);
+std::ostream &operator<<(std::ostream &ostrm, const Matrix &matrix);
 
 #endif

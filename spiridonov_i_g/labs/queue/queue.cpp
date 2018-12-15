@@ -5,12 +5,12 @@
 #include "queue.hpp"
 
 Queue::Queue(int size)
-    : size_(size), start_(0), end_(0) {
+        : size_(size), start_(0), end_(0) {
     data_ = new int[size_];
 }
 
-Queue::Queue(const Queue& obj)
-    : size_(obj.size_), start_(obj.start_), end_(obj.end_) {
+Queue::Queue(const Queue &obj)
+        : size_(obj.size_), start_(obj.start_), end_(obj.end_) {
     data_ = new int[size_];
     std::copy(obj.data_, obj.data_ + obj.size_, data_);
 }
@@ -46,10 +46,10 @@ void Queue::enqueue(int value) {
     end_ = (end_ + 1) % size_;
 }
 
-Queue& Queue::operator=(const Queue& rhs) {
+Queue &Queue::operator=(const Queue &rhs) {
     if (this != &rhs) {
         if (size_ < rhs.size_) {
-            int* newData(new int[rhs.size_]);
+            int *newData(new int[rhs.size_]);
             delete[] data_;
             data_ = newData;
         }

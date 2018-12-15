@@ -9,12 +9,12 @@
 
 template<class T>
 class Stack {
- public:
+public:
     Stack() = default;
 
-    Stack(const Stack& stack) {
+    Stack(const Stack &stack) {
         Stack<T> newStack;
-        Node<T>* temp = stack.head_;
+        Node<T> *temp = stack.head_;
 
         while (temp != nullptr) {
             newStack.push(temp->data_);
@@ -35,9 +35,9 @@ class Stack {
         }
     }
 
-    Stack& operator=(const Stack<T>& rhs) {
+    Stack &operator=(const Stack<T> &rhs) {
         Stack<T> newStack;
-        Node<T>* temp = rhs.head_;
+        Node<T> *temp = rhs.head_;
 
         while (temp != nullptr) {
             newStack.push(temp->data_);
@@ -54,9 +54,9 @@ class Stack {
         return *this;
     }
 
-    const T& pop() {
+    const T &pop() {
         if (!isEmpty()) {
-            Node<T>* oldNode(head_);
+            Node<T> *oldNode(head_);
             head_ = oldNode->next_;
             delete oldNode;
         } else {
@@ -64,11 +64,11 @@ class Stack {
         }
     }
 
-    void push(const T& data) {
+    void push(const T &data) {
         head_ = new Node<T>(data, head_);
     }
 
-    const T& top() const {
+    const T &top() const {
         if (!isEmpty()) {
             return head_->data_;
         } else {
@@ -80,8 +80,8 @@ class Stack {
         return (head_ == nullptr);
     }
 
-    std::ostream& writeTo(std::ostream& ostrm) const {
-        Node<T>* temp = head_;
+    std::ostream &writeTo(std::ostream &ostrm) const {
+        Node<T> *temp = head_;
         while (temp != nullptr) {
             ostrm << temp->data_ << " ";
             temp = temp->next_;
@@ -89,12 +89,12 @@ class Stack {
         return ostrm;
     }
 
- private:
-    Node<T>* head_{ nullptr };
+private:
+    Node<T> *head_{nullptr};
 };
 
 template<class T>
-inline std::ostream& operator<<(std::ostream& ostrm, const Stack<T>& a) {
+inline std::ostream &operator<<(std::ostream &ostrm, const Stack<T> &a) {
     return a.writeTo(ostrm);
 }
 

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void testParse(const string& str) {
+void testParse(const string &str) {
     istringstream istrm(str);
     Rational number;
     istrm >> number;
