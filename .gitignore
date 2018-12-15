@@ -24,6 +24,7 @@ bld/
 spiridonov_i_g/bin.win64.vc2015.dbg/
 spiridonov_i_g/build/
 spiridonov_i_g/cmake/
+spiridonov_i_g/.idea/
 
 # Visual Studio 2015 cache/options directory
 .vs/
