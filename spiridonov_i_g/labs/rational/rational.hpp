@@ -10,19 +10,19 @@ class Rational {
 public:
     Rational() = default;
 
-    explicit Rational(const int numerator);
+    explicit Rational(int numerator);
 
-    Rational(const int numerator, const int denominator);
+    Rational(int numerator, int denominator);
 
     ~Rational() = default;
 
     int getNumerator() const;
 
-    void setNumerator(const int num);
+    void setNumerator(int num);
 
     int getDenominator() const;
 
-    void setDenominator(const int den);
+    void setDenominator(int den);
 
     bool operator==(const Rational &rhs) const;
 
@@ -30,19 +30,19 @@ public:
 
     Rational &operator+=(const Rational &rhs);
 
-    Rational &operator+=(const int rhs);
+    Rational &operator+=(int rhs);
 
     Rational &operator-=(const Rational &rhs);
 
-    Rational &operator-=(const int rhs);
+    Rational &operator-=(int rhs);
 
     Rational &operator*=(const Rational &rhs);
 
-    Rational &operator*=(const int rhs);
+    Rational &operator*=(int rhs);
 
     Rational &operator/=(const Rational &rhs);
 
-    Rational &operator/=(const int rhs);
+    Rational &operator/=(int rhs);
 
     void normalize();
 

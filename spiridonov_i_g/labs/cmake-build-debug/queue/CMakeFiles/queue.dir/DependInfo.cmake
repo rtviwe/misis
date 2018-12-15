@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/priority_queue/node.cpp" "C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/queue/CMakeFiles/queue.dir/__/priority_queue/node.cpp.obj"
   "C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/queue/queue.cpp" "C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/cmake-build-debug/queue/CMakeFiles/queue.dir/queue.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

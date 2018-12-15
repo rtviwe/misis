@@ -378,6 +378,14 @@
 		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/matrix/matrix.hpp">
 			<Option target="matrix"/>
 		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/priority_queue/node.cpp">
+			<Option target="queue"/>
+			<Option target="priority_queue"/>
+		</Unit>
+		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/priority_queue/node.hpp">
+			<Option target="queue"/>
+			<Option target="priority_queue"/>
+		</Unit>
 		<Unit filename="C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/priority_queue/priority_queue.cpp">
 			<Option target="priority_queue"/>
 		</Unit>

@@ -9,10 +9,9 @@
 struct Complex {
     Complex() = default;
 
-    explicit Complex(const double real);
+    explicit Complex(double real);
 
-    Complex(const double real,
-            const double imaginary);
+    Complex(double real, double imaginary);
 
     ~Complex() = default;
 
@@ -22,19 +21,19 @@ struct Complex {
 
     Complex &operator+=(const Complex &rhs);
 
-    Complex &operator+=(const double rhs);
+    Complex &operator+=(double rhs);
 
     Complex &operator-=(const Complex &rhs);
 
-    Complex &operator-=(const double rhs);
+    Complex &operator-=(double rhs);
 
     Complex &operator*=(const Complex &rhs);
 
-    Complex &operator*=(const double rhs);
+    Complex &operator*=(double rhs);
 
     Complex &operator/=(const Complex &rhs);
 
-    Complex &operator/=(const double rhs);
+    Complex &operator/=(double rhs);
 
     std::ostream &writeTo(std::ostream &ostrm) const;
 

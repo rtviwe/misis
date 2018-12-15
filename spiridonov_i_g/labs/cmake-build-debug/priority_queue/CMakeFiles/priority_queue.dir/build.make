@@ -83,17 +83,44 @@ priority_queue\CMakeFiles\priority_queue.dir\priority_queue.cpp.s: cmake_force
 <<
 	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug
 
+priority_queue\CMakeFiles\priority_queue.dir\node.cpp.obj: priority_queue\CMakeFiles\priority_queue.dir\flags.make
+priority_queue\CMakeFiles\priority_queue.dir\node.cpp.obj: ..\priority_queue\node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object priority_queue/CMakeFiles/priority_queue.dir/node.cpp.obj"
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue
+	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\priority_queue.dir\node.cpp.obj /FdCMakeFiles\priority_queue.dir\priority_queue.pdb /FS -c C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\priority_queue\node.cpp
+<<
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug
+
+priority_queue\CMakeFiles\priority_queue.dir\node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/priority_queue.dir/node.cpp.i"
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue
+	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\priority_queue.dir\node.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\priority_queue\node.cpp
+<<
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug
+
+priority_queue\CMakeFiles\priority_queue.dir\node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/priority_queue.dir/node.cpp.s"
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue
+	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\priority_queue.dir\node.cpp.s /c C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\priority_queue\node.cpp
+<<
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug
+
 # Object files for target priority_queue
 priority_queue_OBJECTS = \
-"CMakeFiles\priority_queue.dir\priority_queue.cpp.obj"
+"CMakeFiles\priority_queue.dir\priority_queue.cpp.obj" \
+"CMakeFiles\priority_queue.dir\node.cpp.obj"
 
 # External object files for target priority_queue
 priority_queue_EXTERNAL_OBJECTS =
 
 priority_queue\priority_queue.lib: priority_queue\CMakeFiles\priority_queue.dir\priority_queue.cpp.obj
+priority_queue\priority_queue.lib: priority_queue\CMakeFiles\priority_queue.dir\node.cpp.obj
 priority_queue\priority_queue.lib: priority_queue\CMakeFiles\priority_queue.dir\build.make
 priority_queue\priority_queue.lib: priority_queue\CMakeFiles\priority_queue.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library priority_queue.lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library priority_queue.lib"
 	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue
 	$(CMAKE_COMMAND) -P CMakeFiles\priority_queue.dir\cmake_clean_target.cmake
 	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug

@@ -140,6 +140,39 @@ priority_queue\fast:
 	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue
 .PHONY : priority_queue\fast
 
+node.obj: node.cpp.obj
+
+.PHONY : node.obj
+
+# target to build an object file
+node.cpp.obj:
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug
+	$(MAKE) -f priority_queue\CMakeFiles\priority_queue.dir\build.make /nologo -$(MAKEFLAGS) priority_queue\CMakeFiles\priority_queue.dir\node.cpp.obj
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue
+.PHONY : node.cpp.obj
+
+node.i: node.cpp.i
+
+.PHONY : node.i
+
+# target to preprocess a source file
+node.cpp.i:
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug
+	$(MAKE) -f priority_queue\CMakeFiles\priority_queue.dir\build.make /nologo -$(MAKEFLAGS) priority_queue\CMakeFiles\priority_queue.dir\node.cpp.i
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue
+.PHONY : node.cpp.i
+
+node.s: node.cpp.s
+
+.PHONY : node.s
+
+# target to generate assembly for a file
+node.cpp.s:
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug
+	$(MAKE) -f priority_queue\CMakeFiles\priority_queue.dir\build.make /nologo -$(MAKEFLAGS) priority_queue\CMakeFiles\priority_queue.dir\node.cpp.s
+	cd C:\Users\rtviw\source\repos\spiridonov_i_g\spiridonov_i_g\labs\cmake-build-debug\priority_queue
+.PHONY : node.cpp.s
+
 priority_queue.obj: priority_queue.cpp.obj
 
 .PHONY : priority_queue.obj
@@ -182,6 +215,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... priority_queue
 	@echo ... edit_cache
+	@echo ... node.obj
+	@echo ... node.i
+	@echo ... node.s
 	@echo ... priority_queue.obj
 	@echo ... priority_queue.i
 	@echo ... priority_queue.s

@@ -45,7 +45,7 @@ Complex &Complex::operator-=(const Complex &rhs) {
 }
 
 Complex &Complex::operator*=(const Complex &rhs) {
-    int tempRe = re;
+    double tempRe = re;
     re = (re * rhs.re) - (im * rhs.im);
     im = (tempRe * rhs.im) + (im * rhs.re);
     return *this;
@@ -56,7 +56,7 @@ Complex &Complex::operator/=(const Complex &rhs) {
         throw std::exception("Divide by zero exception");
     }
 
-    int tempRe = re;
+    double tempRe = re;
     re = ((re * rhs.re) + (im * rhs.im))
          / ((rhs.re * rhs.re) + (rhs.im * rhs.im));
     im = ((im * rhs.re) - (tempRe * rhs.im))

@@ -59,6 +59,7 @@ public:
             Node<T> *oldNode(head_);
             head_ = oldNode->next_;
             delete oldNode;
+            return oldNode;
         } else {
             throw std::exception("Stack is empty");
         }

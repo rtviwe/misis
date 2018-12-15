@@ -8,7 +8,7 @@ class DynamicArray {
 public:
     DynamicArray() = default;
 
-    explicit DynamicArray(const int size);
+    explicit DynamicArray(int size);
 
     DynamicArray(const DynamicArray &obj);
 
@@ -16,11 +16,11 @@ public:
 
     int getSize() const;
 
-    void setSize(const int size);
+    void setSize(int size);
 
     std::ostream &writeTo(std::ostream &ostrm) const;
 
-    int &operator[](const int i);
+    int &operator[](int i);
 
     DynamicArray &operator=(const DynamicArray &rhs);
 

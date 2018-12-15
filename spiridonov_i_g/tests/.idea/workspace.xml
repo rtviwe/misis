@@ -17,22 +17,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="514e7c81-a2f3-40bd-ae69-f85586e4b30c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../labs/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/priority_queue.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/priority_queue.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/priority_queue.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/priority_queue.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/priority_queue.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/priority_queue.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/priority_queue.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/priority_queue.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/priority_queue/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/queue.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/queue.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/queue.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/queue.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/queue.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/queue.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/queue.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/CMakeFiles/queue.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/queue/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/rational/CMakeFiles/rational.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/rational/CMakeFiles/rational.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/cmake-build-debug/stack/CMakeFiles/stack.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/cmake-build-debug/stack/CMakeFiles/stack.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../labs/complex/complex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/complex/complex.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../labs/complex/complex.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/complex/complex.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../labs/dynamic_array/dynamic_array.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/dynamic_array/dynamic_array.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../labs/dynamic_array/dynamic_array.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/dynamic_array/dynamic_array.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../labs/matrix/matrix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/matrix/matrix.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../labs/matrix/matrix.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/matrix/matrix.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/priority_queue/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/priority_queue/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/priority_queue/node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/priority_queue/node.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/priority_queue/node.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/priority_queue/node.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../labs/priority_queue/priority_queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/priority_queue/priority_queue.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../labs/priority_queue/priority_queue.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/priority_queue/priority_queue.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../labs/queue/queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/queue/queue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../labs/queue/queue.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/queue/queue.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../labs/rational/rational.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/rational/rational.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/queue/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/queue/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../labs/rational/rational.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/rational/rational.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../labs/stack/node.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/stack/node.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../labs/stack/stack.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/stack/stack.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_priority_queue/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test_priority_queue/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,12 +60,17 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/test_priority_queue/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" selection-start-column="36" selection-end-column="36" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_complex/main.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -62,6 +82,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/test_rational/main.cpp" />
+        <option value="$PROJECT_DIR$/test_complex/main.cpp" />
+        <option value="$PROJECT_DIR$/test_dynamic_array/main.cpp" />
+        <option value="$PROJECT_DIR$/test_priority_queue/main.cpp" />
       </list>
     </option>
   </component>
@@ -83,6 +107,41 @@
             <path>
               <item name="tests" type="b2602c69:ProjectViewProjectNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_complex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_dynamic_array" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_matrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_priority_queue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_queue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_rational" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_stack" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -158,16 +217,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544900846662</updated>
-      <workItem from="1544900847920" duration="69000" />
+      <workItem from="1544900847920" duration="1834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69000" />
+    <option name="totallyTimeSpent" value="1834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
@@ -176,7 +234,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="CMake" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -198,6 +256,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_stack/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_rational/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_matrix/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_complex/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_queue/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_dynamic_array/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_dynamic_array/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_priority_queue/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
