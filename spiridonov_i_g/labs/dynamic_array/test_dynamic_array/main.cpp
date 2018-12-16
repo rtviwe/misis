@@ -9,7 +9,7 @@ int main() {
     DynamicArray dynamicArray1(10);
 
     for (int i(0); i < 10; i++) {
-        dynamicArray1[i] = (i * i) / 2.0;
+        dynamicArray1[i] = static_cast<int>((i * i) / 2.0);
     }
     cout << dynamicArray1 << endl << endl;
     double a = dynamicArray1[3];

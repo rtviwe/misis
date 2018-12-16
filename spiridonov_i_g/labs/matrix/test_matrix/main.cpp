@@ -13,7 +13,7 @@ int main() {
     matrix1.getElementAt(1, 1) = 5;
     matrix1.getElementAt(2, 0) = 8;
     matrix1.getElementAt(2, 1) = 9;
-    cout << "matrix1 = " << "\n" << matrix1 << endl;
+    cout << "matrix1 = " << endl << matrix1 << endl;
 
     Matrix matrix2 = matrix1;
     matrix2.getElementAt(0, 0) = 1;
@@ -22,10 +22,10 @@ int main() {
     matrix2.getElementAt(1, 1) = 1;
     matrix2.getElementAt(2, 0) = 8;
     matrix2.getElementAt(2, 1) = 5;
-    cout << "matrix2 = " << "\n" << matrix2 << endl;
+    cout << "matrix2 = " << endl << matrix2 << endl;
 
     Matrix matrix3;
-    cout << "matrix3 = " << "\n" << matrix3 << endl;
+    cout << "matrix3 = " << endl << matrix3 << endl;
 
     return 0;
 }
