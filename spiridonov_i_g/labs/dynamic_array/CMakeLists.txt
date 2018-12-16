@@ -1,2 +1,3 @@
 add_library(dynamic_array dynamic_array.hpp dynamic_array.cpp)
 set_property(TARGET dynamic_array PROPERTY CXX_STANDARD 14)
+add_subdirectory(test_dynamic_array)

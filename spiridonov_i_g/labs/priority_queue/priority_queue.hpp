@@ -4,20 +4,28 @@ class PriorityQueue {
 public:
     PriorityQueue() = default;
 
-    PriorityQueue(int size);
+    explicit PriorityQueue(int size);
 
-    bool empty();
+    PriorityQueue(const PriorityQueue &obj);
 
-    int size();
+    ~PriorityQueue();
 
-    int front();
+    bool isEmpty();
 
-    int push();
+    bool isFull();
+
+    int top();
 
     int pop();
 
+    void enqueue(int value, int priority);
+
+    PriorityQueue &operator=(const PriorityQueue &rhs);
+
+    int *data_;
+    int *priorities_;
+
 private:
-    int _size;
-    int *_data;
-    int _index;
+    int size_;
+    int end_;
 };

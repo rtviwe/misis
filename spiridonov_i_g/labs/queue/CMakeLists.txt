@@ -1,2 +1,3 @@
-add_library(queue queue.hpp queue.cpp ../priority_queue/node.hpp ../priority_queue/node.cpp)
+add_library(queue queue.hpp queue.cpp)
 set_property(TARGET queue PROPERTY CXX_STANDARD 14)
+add_subdirectory(test_queue)
