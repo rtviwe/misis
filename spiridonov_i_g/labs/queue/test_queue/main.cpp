@@ -21,6 +21,9 @@ int main() {
     queue1.enqueue(10);
     cout << "queue1.enqueue(10) = " << queue1.top() << endl;
     cout << "queue1.top() = " << queue1.top() << endl;
+    queue1.pop();
+    queue1.enqueue(11);
+    cout << "queue1.top() = " << queue1.top() << endl;
 
     Queue queue3(10);
     try {

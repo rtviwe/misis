@@ -20,6 +20,10 @@ DynamicArray::~DynamicArray() {
     delete[] data_;
 }
 
+int DynamicArray::getSize() {
+    return size_;
+}
+
 int DynamicArray::getSize() const {
     return size_;
 }
@@ -30,6 +34,18 @@ void DynamicArray::setSize(const int size) {
 }
 
 int &DynamicArray::operator[](const int i) {
+    if (i < 0) {
+        throw std::out_of_range("Index should not be negative");
+    }
+
+    if (i > size_) {
+        throw std::out_of_range("Index should be less than size of array");
+    }
+
+    return data_[i];
+}
+
+int &DynamicArray::operator[](const int i) const {
     if (i < 0) {
         throw std::out_of_range("Index should not be negative");
     }

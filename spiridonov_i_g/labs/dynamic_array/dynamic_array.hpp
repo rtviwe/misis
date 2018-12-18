@@ -14,6 +14,8 @@ public:
 
     ~DynamicArray();
 
+    int getSize();
+
     int getSize() const;
 
     void setSize(int size);
@@ -21,6 +23,8 @@ public:
     std::ostream &writeTo(std::ostream &ostrm) const;
 
     int &operator[](int i);
+
+    int &operator[](int i) const;
 
     DynamicArray &operator=(const DynamicArray &rhs);
 
