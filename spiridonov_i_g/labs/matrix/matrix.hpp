@@ -8,17 +8,21 @@ class Matrix {
 public:
     Matrix() = default;
 
-    Matrix(const int rowSize, const int columnSize);
+    Matrix(int rowSize, int columnSize);
 
     Matrix(const Matrix &obj);
 
     ~Matrix();
 
+    int getRowSize();
+
     int getRowSize() const;
+
+    int getColumnSize();
 
     int getColumnSize() const;
 
-    int &getElementAt(const int rowSize, const int columnSize);
+    int &getElementAt(int rowSize, int columnSize);
 
     std::ostream &writeTo(std::ostream &ostrm) const;
 

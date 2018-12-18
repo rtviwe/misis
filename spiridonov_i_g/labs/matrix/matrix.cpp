@@ -54,8 +54,17 @@ int &Matrix::getElementAt(const int rowSize, const int columnSize) {
     return data_[rowSize][columnSize];
 }
 
+int Matrix::getRowSize() {
+    return rowSize_;
+}
+
 int Matrix::getRowSize() const {
     return rowSize_;
+}
+
+
+int Matrix::getColumnSize() {
+    return columnSize_;
 }
 
 int Matrix::getColumnSize() const {

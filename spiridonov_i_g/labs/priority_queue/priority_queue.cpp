@@ -35,6 +35,19 @@ int PriorityQueue::top() {
     return data_[end_];
 }
 
+
+bool PriorityQueue::isEmpty() const {
+    return end_ == 0;
+}
+
+bool PriorityQueue::isFull() const {
+    return size_ == end_;
+}
+
+int PriorityQueue::top() const {
+    return data_[end_];
+}
+
 int PriorityQueue::pop() {
     if (isEmpty()) {
         throw std::exception("Queue is empty");

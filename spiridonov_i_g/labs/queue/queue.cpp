@@ -27,6 +27,18 @@ int Queue::top() {
     return data_[start_];
 }
 
+bool Queue::isEmpty() const {
+    return start_ == end_;
+}
+
+bool Queue::isFull() const {
+    return (end_ + 1) % size_ == start_;
+}
+
+int Queue::top() const {
+    return data_[start_];
+}
+
 int Queue::pop() {
     if (isEmpty()) {
         throw std::exception("Queue is empty");

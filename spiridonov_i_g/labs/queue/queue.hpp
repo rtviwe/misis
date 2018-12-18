@@ -16,9 +16,15 @@ public:
 
     bool isEmpty();
 
+    bool isEmpty() const;
+
     bool isFull();
 
+    bool isFull() const;
+
     int top();
+
+    int top() const;
 
     int pop();
 
