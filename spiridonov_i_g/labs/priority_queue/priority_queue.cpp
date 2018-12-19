@@ -7,6 +7,10 @@ PriorityQueue::PriorityQueue(int size)
         : size_(size), end_(0) {
     data_ = new int[size_];
     priorities_ = new int[size_];
+
+    for (int i(0); i < end_; i++) {
+        priorities_[i] = 0;
+    }
 }
 
 PriorityQueue::PriorityQueue(const PriorityQueue &obj)
@@ -66,10 +70,10 @@ void PriorityQueue::enqueue(int value, int priority) {
     end_++;
 
     for (int i(0); i < end_; i++) {
-        if (priority <= priorities_[i]) {
-            for (int j(i); j < end_; j++) {
-                data_[j + 1] = data_[j];
-                priorities_[j + 1] = priorities_[j];
+        if (priority >= priorities_[i]) {
+            for (int j(end_); j > i; j--) {
+                data_[j] = data_[j - 1];
+                priorities_[j] = priorities_[j - 1];
             }
             data_[i] = value;
             priorities_[i] = priority;

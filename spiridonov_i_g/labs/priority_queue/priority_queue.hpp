@@ -32,10 +32,9 @@ public:
 
     PriorityQueue &operator=(const PriorityQueue &rhs);
 
+private:
     int *data_;
     int *priorities_;
-
-private:
     int size_;
     int end_;
 };
