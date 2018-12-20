@@ -5,7 +5,7 @@
 #include "queue.hpp"
 
 Queue::Queue(int size)
-        : size_(size), start_(0), end_(0) {
+        : size_(size + 1), start_(0), end_(0) {
     data_ = new int[size_];
 }
 
