@@ -67,6 +67,10 @@ void PriorityQueue::enqueue(int value, int priority) {
         throw std::exception("Queue is full");
     }
 
+    if (priority <= 0) {
+        throw std::exception("Priority cannot be negative");
+    }
+
     end_++;
 
     for (int i(0); i < end_; i++) {
