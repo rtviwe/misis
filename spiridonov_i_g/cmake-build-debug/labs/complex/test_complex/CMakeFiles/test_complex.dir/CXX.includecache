@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/complex/complex.hpp
+iostream
+-
+
+C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/complex/test_complex/main.cpp
+iostream
+-
+sstream
+-
+../complex.hpp
+C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/labs/complex/complex.hpp
+

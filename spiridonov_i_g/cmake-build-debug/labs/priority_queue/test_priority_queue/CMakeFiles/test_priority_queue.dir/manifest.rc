@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/rtviw/source/repos/spiridonov_i_g/spiridonov_i_g/cmake-build-debug/labs/priority_queue/test_priority_queue/CMakeFiles/test_priority_queue.dir/embed.manifest"

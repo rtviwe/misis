@@ -5,3 +5,4 @@ set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "cmake")
 project(spiridonov_i_g)
 
 add_subdirectory(labs)
+add_subdirectory(tests)
