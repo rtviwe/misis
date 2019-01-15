@@ -1,106 +1,101 @@
-// Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
-
-#include <algorithm>
+#include <bits/exception.h>
+#include <stdexcept>
 #include "priority_queue.hpp"
 
-PriorityQueue::PriorityQueue(int size)
-        : size_(size), end_(0) {
-    data_ = new int[size_];
-    priorities_ = new int[size_];
-
-    for (int i(0); i < end_; i++) {
-        priorities_[i] = 0;
+PriorityQueue::PriorityQueue(const PriorityQueue &priorityQueueOnList) {
+    Node *copyNode = priorityQueueOnList.head_;
+    while (copyNode != nullptr) {
+        push(copyNode->data, copyNode->priority);
+        copyNode = copyNode->nextNode;
     }
 }
 
-PriorityQueue::PriorityQueue(const PriorityQueue &obj)
-        : size_(obj.size_), end_(obj.end_) {
-    data_ = new int[size_];
-    std::copy(obj.data_, obj.data_ + obj.size_, data_);
-
-    priorities_ = new int[size_];
-    std::copy(obj.priorities_, obj.priorities_ + obj.size_, priorities_);
-}
-
 PriorityQueue::~PriorityQueue() {
-    delete[] data_;
-    delete[] priorities_;
-}
-
-bool PriorityQueue::isEmpty() {
-    return end_ == 0;
-}
-
-bool PriorityQueue::isFull() {
-    return size_ == end_;
-}
-
-int PriorityQueue::top() {
-    return data_[end_];
-}
-
-
-bool PriorityQueue::isEmpty() const {
-    return end_ == 0;
-}
-
-bool PriorityQueue::isFull() const {
-    return size_ == end_;
-}
-
-int PriorityQueue::top() const {
-    return data_[end_];
+    while (!isEmpty()) {
+        pop();
+    }
 }
 
 int PriorityQueue::pop() {
     if (isEmpty()) {
-        throw std::exception("Queue is empty");
+        throw std::runtime_error("Stack is empty");
     }
 
-    int result = data_[end_];
-    end_--;
-    return result;
+    int data = head_->data;
+
+    Node *nodeToDelete = head_;
+    head_ = head_->nextNode;
+    delete nodeToDelete;
+
+    return data;
 }
 
-void PriorityQueue::enqueue(int value, int priority) {
-    if (isFull()) {
-        throw std::exception("Queue is full");
-    }
+void PriorityQueue::push(int value, int priority) {
+    if (isEmpty()) {
+        Node *newHead = new Node();
+        newHead->data = value;
+        newHead->priority = priority;
 
-    if (priority <= 0) {
-        throw std::exception("Priority cannot be negative");
-    }
+        head_ = newHead;
+    } else {
+        Node *newNode = new Node();
+        newNode->data = value;
+        newNode->priority = priority;
 
-    end_++;
+        if (head_->priority <= priority) {
+            Node *tempNode = head_;
+            head_ = newNode;
+            head_->nextNode = tempNode;
+            return;
+        }
 
-    for (int i(0); i < end_; i++) {
-        if (priority >= priorities_[i]) {
-            for (int j(end_); j > i; j--) {
-                data_[j] = data_[j - 1];
-                priorities_[j] = priorities_[j - 1];
+        Node *findNode = head_;
+        Node *next = head_->nextNode;
+        while (next != nullptr) {
+            if (next->priority <= priority) {
+                Node *tempNode = findNode->nextNode;
+                findNode->nextNode = newNode;
+                newNode->nextNode = tempNode;
             }
-            data_[i] = value;
-            priorities_[i] = priority;
-            break;
+            findNode = findNode->nextNode;
+            next = next->nextNode;
         }
     }
 }
 
-PriorityQueue &PriorityQueue::operator=(const PriorityQueue &rhs) {
-    if (this != &rhs) {
-        if (size_ < rhs.size_) {
-            int *newData(new int[rhs.size_]);
-            delete[] data_;
-            data_ = newData;
+bool PriorityQueue::isEmpty() const {
+    return head_ == nullptr;
+}
 
-            int *newPriorities(new int[rhs.size_]);
-
-            delete[] priorities_;
-            priorities_ = newPriorities;
+PriorityQueue &PriorityQueue::operator=(const PriorityQueue &priorityQueue) {
+    if (this != &priorityQueue) {
+        if (head_ == nullptr) {
+            head_ = new Node();
         }
-        std::copy(rhs.data_, rhs.data_ + rhs.size_, data_);
-        std::copy(rhs.priorities_, rhs.priorities_ + rhs.size_, priorities_);
-        size_ = rhs.size_;
+        head_->data = priorityQueue.head_->data;
+        head_->priority = priorityQueue.head_->priority;
+
+        Node *thisNode = head_;
+        Node *copyNode = priorityQueue.head_->nextNode;
+
+        while (copyNode != nullptr) {
+            if (thisNode->nextNode == nullptr) {
+                thisNode->nextNode = new Node();
+            }
+            thisNode = thisNode->nextNode;
+            thisNode->data = copyNode->data;
+            thisNode->priority = copyNode->priority;
+            copyNode = copyNode->nextNode;
+        }
+
+        Node *restNode = thisNode->nextNode;
+
+        while (restNode != nullptr) {
+            Node *nodeToDelete = restNode;
+            restNode = restNode->nextNode;
+            delete nodeToDelete;
+        }
     }
+
     return *this;
 }

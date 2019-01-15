@@ -1,42 +1,32 @@
 // Copyright 2018 by Igor Spiridonov under Free Public License 1.0.0
 
-#pragma once
-#ifndef PRIORITY_QUEUE_HPP
-#define PRIORITY_QUEUE_HPP
+#ifndef QUEUE_ON_LIST_H
+#define QUEUE_ON_LIST_H
 
 class PriorityQueue {
 public:
     PriorityQueue() = default;
 
-    explicit PriorityQueue(int size);
-
-    PriorityQueue(const PriorityQueue &obj);
+    PriorityQueue(const PriorityQueue &priorityQueueOnList);
 
     ~PriorityQueue();
 
-    bool isEmpty();
-
-    bool isEmpty() const;
-
-    bool isFull();
-
-    bool isFull() const;
-
-    int top();
-
-    int top() const;
+    PriorityQueue &operator=(const PriorityQueue &priorityQueue);
 
     int pop();
 
-    void enqueue(int value, int priority);
+    void push(int value, int priority);
 
-    PriorityQueue &operator=(const PriorityQueue &rhs);
+    bool isEmpty() const;
 
 private:
-    int *data_;
-    int *priorities_;
-    int size_;
-    int end_;
+    struct Node {
+        int data{0};
+        int priority{0};
+        Node *nextNode{nullptr};
+    };
+
+    Node *head_{nullptr};
 };
 
-#endif
+#endif //QUEUE_ON_LIST_H
